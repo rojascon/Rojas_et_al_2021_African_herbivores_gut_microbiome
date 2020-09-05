@@ -1,0 +1,341 @@
+Group,sample_date,sample_month,sample_year,species,species_short,tax_name,Order,Family,Genus,broad_diet,digestive_system,fermenter,diet_guild,region
+LM0037,16-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0038,16-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0039,16-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0040,16-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0041,16-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0140,20-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0141,20-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0227,26-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0228,26-Jul-16,july,2016,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+BUF101,27-Oct-14,october,2014,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF102,27-Oct-14,october,2014,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF103,28-Oct-14,october,2014,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF104,1-Nov-14,november,2014,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF105,2-Nov-14,november,2014,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF109,4-Nov-14,november,2014,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF202,3-Mar-15,march,2015,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF203,8-Mar-15,march,2015,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF204,8-Mar-15,march,2015,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF205,8-Mar-15,march,2015,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+BUF209,13-Mar-15,march,2015,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0028,16-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0077,18-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0083,19-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0088,19-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0115,19-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0162,22-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0163,22-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0164,22-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+LM0243,28-Jul-16,july,2016,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,herbivore,ruminant,foregut,grazer,Laikipia
+COW101,31-Oct-14,october,2014,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW102,31-Oct-14,october,2014,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW103,31-Oct-14,october,2014,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW109,1-Nov-14,november,2014,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW111,1-Nov-14,november,2014,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW227,7-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW228,7-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW229,7-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW230,7-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW231,7-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW250,11-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW251,11-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW252,11-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW253,11-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+COW254,11-Mar-15,march,2015,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0066,18-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0107,19-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0108,19-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0109,19-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0273,29-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0274,29-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0275,29-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0276,29-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0277,29-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0282,29-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0284,29-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+LM0285,29-Jul-16,july,2016,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,herbivore,ruminant,foregut,grazer,Laikipia
+ELA102,30-Oct-14,october,2014,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA103,30-Oct-14,october,2014,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA104,30-Oct-14,october,2014,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA105,30-Oct-14,october,2014,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA106,30-Oct-14,october,2014,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA108,30-Oct-14,october,2014,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA109,30-Oct-14,october,2014,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA117,2-Nov-14,november,2014,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA201,3-Mar-15,march,2015,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA202,3-Mar-15,march,2015,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELA204,16-Mar-15,march,2015,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0134,20-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0146,21-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0147,21-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0179,23-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0204,25-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0205,25-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0210,25-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0211,25-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0237,28-Jul-16,july,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0320,6-Aug-16,august,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0321,6-Aug-16,august,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0334,6-Aug-16,august,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0335,6-Aug-16,august,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0336,6-Aug-16,august,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0341,6-Aug-16,august,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0342,6-Aug-16,august,2016,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+ELE101,26-Oct-14,october,2014,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE102,26-Oct-14,october,2014,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE103,28-Oct-14,october,2014,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE104,29-Oct-14,october,2014,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE105,29-Oct-14,october,2014,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE109,31-Oct-14,october,2014,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE201,1-Mar-15,march,2015,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE202,3-Mar-15,march,2015,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE203,3-Mar-15,march,2015,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE204,4-Mar-15,march,2015,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE205,7-Mar-15,march,2015,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+ELE209,7-Mar-15,march,2015,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0001,14-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0002,14-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0021,15-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0023,15-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0024,15-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0032,16-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0054,18-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0101,19-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0102,19-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0260,29-Jul-16,july,2016,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,herbivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+GIR101,26-Oct-14,october,2014,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR102,26-Oct-14,october,2014,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR103,26-Oct-14,october,2014,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR104,27-Oct-14,october,2014,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR105,27-Oct-14,october,2014,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR109,31-Oct-14,october,2014,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR201,1-Mar-15,march,2015,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR202,1-Mar-15,march,2015,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR203,1-Mar-15,march,2015,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR204,8-Mar-15,march,2015,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR205,8-Mar-15,march,2015,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+GIR209,10-Mar-15,march,2015,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0022,15-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0025,15-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0124,20-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0142,21-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0143,21-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0212,25-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0213,25-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0214,25-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0217,25-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0259,29-Jul-16,july,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0313,6-Aug-16,august,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0314,6-Aug-16,august,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0316,6-Aug-16,august,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0317,6-Aug-16,august,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0337,6-Aug-16,august,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0338,6-Aug-16,august,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+LM0339,6-Aug-16,august,2016,Reticulated_giraffe,Giraffe,Giraffa camelopardalis reticulata,Artiodactyla,Giraffidae,Giraffa,herbivore,ruminant,foregut,browser,Laikipia
+IMP102,29-Oct-14,october,2014,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP103,29-Oct-14,october,2014,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP104,30-Oct-14,october,2014,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP105,30-Oct-14,october,2014,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP106,30-Oct-14,october,2014,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+HAR104,2-Nov-14,november,2014,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP201,2-Mar-15,march,2015,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP202,2-Mar-15,march,2015,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP203,2-Mar-15,march,2015,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP204,2-Mar-15,march,2015,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP205,2-Mar-15,march,2015,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+IMP209,3-Mar-15,march,2015,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0296,10-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0013,15-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0014,15-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0015,15-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0016,15-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0017,15-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0018,15-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0019,15-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0020,15-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0139,20-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0145,21-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0155,22-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+LM0203,25-Jul-16,july,2016,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,herbivore,ruminant,foregut,mixed_feeder,Laikipia
+WAR103,28-Oct-14,october,2014,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR104,29-Oct-14,october,2014,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR106,29-Oct-14,october,2014,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR107,30-Oct-14,october,2014,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR109,30-Oct-14,october,2014,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR201,4-Mar-15,march,2015,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR202,10-Mar-15,march,2015,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR203,10-Mar-15,march,2015,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR204,10-Mar-15,march,2015,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR205,13-Mar-15,march,2015,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+WAR206,18-Mar-15,march,2015,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0148,21-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0149,21-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0156,22-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0157,22-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0158,22-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0159,22-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0160,22-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0161,22-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0230,27-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0244,28-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+LM0245,28-Jul-16,july,2016,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Laikipia
+PLA101,26-Oct-14,october,2014,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA102,27-Oct-14,october,2014,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA103,27-Oct-14,october,2014,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA104,28-Oct-14,october,2014,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA105,28-Oct-14,october,2014,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA109,30-Oct-14,october,2014,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA201,2-Mar-15,march,2015,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA202,4-Mar-15,march,2015,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA203,4-Mar-15,march,2015,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA204,4-Mar-15,march,2015,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA205,4-Mar-15,march,2015,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+PLA209,13-Mar-15,march,2015,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+LM0295,10-Jul-16,july,2016,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+LM0055,18-Jul-16,july,2016,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+LM0073,18-Jul-16,july,2016,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+LM0074,18-Jul-16,july,2016,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+LM0098,19-Jul-16,july,2016,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+LM0215,25-Jul-16,july,2016,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+LM0229,26-Jul-16,july,2016,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,herbivore,non-ruminant,hindgut,grazer,Laikipia
+AN20,16-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN166,19-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN191,19-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN195,19-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN22,19-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN46,19-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN61,19-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN115,28-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN190,8-Apr-18,april,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN122,29-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN130,29-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN133,29-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN134,29-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN6,29-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN62,29-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN92,29-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN199,22-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN101,26-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN44,30-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN138,27-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN145,27-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN39,27-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN67,27-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN90,27-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN13,24-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN139,24-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN160,24-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN187,24-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN34,24-Mar-18,march,2018,Olive_baboon,Baboon,Papio anubis,Primata,Cercopithecidae,Papio,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN157,6-Jun-18,june,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN15,22-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN185,22-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN159,24-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN47,24-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN206,29-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN121,20-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN152,3-May-18,may,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN204,3-May-18,may,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN49,3-May-18,may,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN51,3-May-18,may,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN57,3-May-18,may,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN147,2-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN71,2-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN75,2-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN117,12-May-18,may,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN140,4-May-18,may,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN31,4-Apr-18,april,2018,African_buffalo,Buffalo,Syncerus caffer,Artiodactyla,Bovidae,Syncerus,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN21,15-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN129,21-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN17,21-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN78,21-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN1,28-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN12,28-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN123,28-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN144,28-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN194,28-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN23,28-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN110,26-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN169,26-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN48,26-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN70,26-Mar-18,march,2018,Cattle,Cattle,Bos taurus,Artiodactyla,Bovidae,Bos,hervivore,ruminant,foregut,grazer,Masai_Mara
+AN16,21-Jun-18,june,2018,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN24,22-Jun-18,june,2018,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN189,20-Mar-18,march,2018,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN131,20-Mar-18,march,2018,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN113,23-Jun-18,june,2018,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN150,23-Jun-18,june,2018,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN56,16-Jun-18,june,2018,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN112,19-Apr-18,april,2018,Common_eland,Eland,Taurotragus oryx,Artiodactyla,Bovidae,Taurotragus,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN203,6-Jun-18,june,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN105,20-May-18,may,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN182,20-May-18,may,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN87,3-Jun-18,june,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN54,25-May-18,may,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN171,6-Apr-18,april,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN161,9-Apr-18,april,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN89,9-Apr-18,april,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN179,14-May-18,may,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN178,8-Apr-18,april,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN69,8-Apr-18,april,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN86,30-Mar-18,march,2018,African_elephant,Elephant,Loxodonta africana,Proboscidea,Elephantidae,Loxodonta,hervivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN7,5-Jun-18,june,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN102,20-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN127,20-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN173,20-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN45,20-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN11,19-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN188,19-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN52,19-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN165,6-Apr-18,april,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN198,17-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN82,17-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN146,18-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN119,30-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN128,30-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN208,30-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN32,30-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN4,30-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN85,30-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN156,31-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN27,31-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN35,31-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN80,31-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN94,31-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN98,31-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN99,31-Mar-18,march,2018,Masai_giraffe,Giraffe,Giraffa camelopardalis tippelskirchii,Artiodactyla,Giraffidae,Giraffa,hervivore,ruminant,foregut,browser,Masai_Mara
+AN76,20-Jun-18,june,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN192,28-Apr-18,april,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN162,29-Apr-18,april,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN100,9-May-18,may,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN184,2-Apr-18,april,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN111,31-May-18,may,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN2,21-Mar-18,march,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN148,13-May-18,may,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN186,13-May-18,may,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN53,13-May-18,may,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN73,13-May-18,may,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN81,13-May-18,may,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN9,13-May-18,may,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN104,24-Mar-18,march,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN158,24-Mar-18,march,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN202,24-Mar-18,march,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN209,24-Mar-18,march,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN42,24-Mar-18,march,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN77,24-Mar-18,march,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN8,24-Mar-18,march,2018,Impala,Impala,Aepyceros melampus,Artiodactyla,Bovidae,Aepyceros,hervivore,ruminant,foregut,mixed_feeder,Masai_Mara
+AN172,21-Jun-18,june,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN201,21-Jun-18,june,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN132,21-Jun-18,june,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN40,22-Jun-18,june,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN65,22-Jun-18,june,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN97,14-Jun-18,june,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN200,23-Jun-18,june,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN151,28-Mar-18,march,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN120,8-Mar-18,march,2018,Warthog,Warthog,Phacochoerus africanus,Artiodactyla,Suidae,Phacochoerus,omnivore,non-ruminant,hindgut,mixed_feeder,Masai_Mara
+AN109,22-Jun-18,june,2018,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,hervivore,non-ruminant,hindgut,grazer,Masai_Mara
+AN37,22-Jun-18,june,2018,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,hervivore,non-ruminant,hindgut,grazer,Masai_Mara
+AN108,23-Jun-18,june,2018,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,hervivore,non-ruminant,hindgut,grazer,Masai_Mara
+AN170,4-May-18,may,2018,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,hervivore,non-ruminant,hindgut,grazer,Masai_Mara
+AN210,17-Mar-18,march,2018,Plains_zebra,Zebra,Equus quagga,Perissodactyla,Equidae,Equus,hervivore,non-ruminant,hindgut,grazer,Masai_Mara
