@@ -43,7 +43,8 @@ rfc=ggplot(data=rare_meta) +
                         col=species_short, 
                         group=Group))+ 
   scale_x_continuous(breaks=reads)+
-  scale_y_continuous(breaks=otus)+ 
+  lims(y=c(0,17000))+
+  #scale_y_continuous(breaks=otus)+ 
   scale_colour_manual(values=my_col)+
   labs(x = "Number of Reads",
        y = "ASV Richness",
