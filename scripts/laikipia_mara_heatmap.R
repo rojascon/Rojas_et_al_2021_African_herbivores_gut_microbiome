@@ -70,8 +70,8 @@ mat_colors <- list(region = c("#a1d99b","#beaed4"));
 myCol<-colorRampPalette(c("cornsilk","maroon4"), space = "rgb")(nrow(asv_heat));
 names(mat_colors$region) <- unique(ideal.order$region);
 
-#prepare plot for saving
-pdf(file="figures/laikipia_mara_ASVheatmap.pdf", width=16, height=8);
+#prepare plot for saving (this code does not produce a correctly formatted PDF file)
+#pdf(file="figures/laikipia_mara_ASVheatmap2.pdf", width=16, height=8);
 
 #plot heatmap
 pheatmap(
@@ -90,7 +90,9 @@ pheatmap(
 );
 
 ##save heatmap
-dev.off();
+#dev.off();
+
+#save manually by going to Plots > Export > Save as PDF
 
 
 
