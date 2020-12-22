@@ -15,7 +15,7 @@ metabovdf=metadf[metadf$Family=="Bovidae",];
 #load distance matrices computed from ASV abundances
 #see script "get_beta_diversity_distances.R"
 #one set of distance matrices for all herbivores; another set for bovids only; 
-#a third set for grazers, browsers, mixed feeders
+#a third set for only grazers, only browsers, only mixed feeders
 load("data/betadiv_dist_objects.Rdata")
 
 #######################  ALL HERBIVORES  ##############################
@@ -32,7 +32,7 @@ pcoa_per=(pcoa_dec$eig/sum(pcoa_dec$eig))*100;
 ax1=format(pcoa_per[1], digits=2, nsmall=2);
 ax2=format(pcoa_per[2], digits=2, nsmall=2);
 
-#color-palette
+#color-palettes
 fam_col=c("#d53e4f","#ffd92f","#1f78b4","#f781bf","palegreen"); 
 guild_col=c("#b3e2cd","#fdcdac","#bebada");
 
@@ -58,6 +58,8 @@ fam_pcoa=ggplot(pcoa_met, aes(Axis1, Axis2))+
         axis.text.y=element_text(size=13),
         axis.title.y=element_text(size=13, face="bold"));
 
+plot(fam_pcoa);
+
 #plot the PCoA-color coded by host dietary guild
 guild_pcoa=ggplot(pcoa_met, aes(Axis1, Axis2))+
   geom_point(mapping=aes(fill=diet_guild),
@@ -78,6 +80,8 @@ guild_pcoa=ggplot(pcoa_met, aes(Axis1, Axis2))+
         axis.title.x=element_text(size=13, face="bold"), 
         axis.text.y=element_text(size=13),
         axis.title.y=element_text(size=13, face="bold"));
+
+plot(guild_pcoa);
 
 #combine the two plots into one plot
 pcoas_all=arrangeGrob(fam_pcoa,guild_pcoa, nrow=1);
@@ -106,9 +110,9 @@ pcoa_per=(pcoa_dec$eig/sum(pcoa_dec$eig))*100;
 ax1=format(pcoa_per[1], digits=2, nsmall=2);
 ax2=format(pcoa_per[2], digits=2, nsmall=2);
 
-#color-palette
+#color-palettes
 species_col=c("#1b9e77", "#d95f02", "darkorchid2", "#e7298a",
-              "#1f78b4","#fbb4ae","#e6ab02","#b3e2cd") 
+              "steelblue1","#fbb4ae","#e6ab02","#b3e2cd");
 guild_col=c("#b3e2cd","#fdcdac","#bebada");
 
 #plot the PCoA-color coded by host family
@@ -120,7 +124,7 @@ species_pcoa=ggplot(pcoa_met, aes(Axis1, Axis2))+
   labs(y=paste("PC2 (",ax2,"%)",sep=""),
        x=paste("PC1 (",ax1,"%)",sep=""),
        fill="",
-       title="All herbivores")+
+       title="Bovids only")+
   theme_bw()+
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -167,8 +171,9 @@ ggsave(filename="betadiv_pcoas_bovids.pdf",
        units="in",
        dpi=500);
 
-#######################  DIETARY GUILDS PCoAs  ##############################
-#ONE PCOA FOR EACH DIETARY GUILD; PCOA COLOR CODED BY HOST SPECIES
+#######################  DIETARY GUILD SPECIFIC PCoAs  ##############################
+#ONE PCOA FOR ONLY BROWSERS, ONE PCOA FOR ONLY GRAZERS, ONE PCOA FOR ONLY MIXED FEEDERS
+#EACH PCOA IS COLOR-CODED BY HOST SPECIES
 
 ############## GRAZERS ONLY
 #make PCoA coordinates
@@ -184,7 +189,7 @@ ax1=format(pcoa_per[1], digits=2, nsmall=2);
 ax2=format(pcoa_per[2], digits=2, nsmall=2);
 
 #color-palette
-grazer_col=c("#a6cee3","#1f78b4","#d9f0a3","#238b45")
+grazer_col=c("#a6cee3","#1f78b4","#d9f0a3","#238b45");
 
 #plot the PCoA-color coded by host family
 grazer_pcoa=ggplot(pcoa_met, aes(Axis1, Axis2))+
@@ -223,7 +228,7 @@ ax1=format(pcoa_per[1], digits=2, nsmall=2);
 ax2=format(pcoa_per[2], digits=2, nsmall=2);
 
 #color-palette
-browser_col=c("#fee08b","#a65628") 
+browser_col=c("#fee08b","#a65628"); 
 
 #plot the PCoA-color coded by host family
 browser_pcoa=ggplot(pcoa_met, aes(Axis1, Axis2))+
@@ -262,7 +267,7 @@ ax1=format(pcoa_per[1], digits=2, nsmall=2);
 ax2=format(pcoa_per[2], digits=2, nsmall=2);
 
 #color-palette
-mixedfeed_col=c("#1b9e77", "#d95f02", "darkorchid2","#1f78b4","#fbb4ae")
+mixedfeed_col=c("#1b9e77", "#d95f02", "darkorchid2","#1f78b4","#fbb4ae");
 
 #plot the PCoA-color coded by host family
 mixedfeed_pcoa=ggplot(pcoa_met, aes(Axis1, Axis2))+

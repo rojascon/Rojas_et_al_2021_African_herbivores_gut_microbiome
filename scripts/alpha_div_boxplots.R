@@ -47,9 +47,6 @@ C$category=factor(C$cat, levels=c("Host family","Host dietary guild"));
 #5 colors for family; 3 colors for dietary guild
 my_col=c("#fb6a4a","#ffd92f","#1f78b4","#f781bf","#74c476","#b3e2cd","#fdcdac","#bebada");
 
-#create tick marks of y-axis
-alpha_breaks=seq(0, round(max(C$value)), by=0.5);
-
 #create plot
 herb_box=ggplot(data=C, 
                 mapping=aes(x=variable,y=value, fill=variable))+
@@ -59,7 +56,7 @@ herb_box=ggplot(data=C,
   labs(x = "",
        y = "Shannon Diversity",
        title="All hervibores")+
-  scale_y_continuous(breaks=alpha_breaks)+
+  ylim(3.4,7)+
   scale_fill_manual(values=my_col)+
   theme(legend.position="none", 
         plot.title = element_text(size=14, face="bold"),
@@ -112,11 +109,8 @@ C2$category=factor(C2$cat, levels=c("Host species","Host dietary guild"));
 
 #select color palette
 #7 colors for family; 3 colors for dietary guild
-my_col2=c("#1b9e77", "#d95f02", "darkorchid2", "#e7298a","#1f78b4",
+my_col2=c("#1b9e77", "#d95f02", "darkorchid2", "#e7298a","steelblue1", 
           "#fbb4ae","#e6ab02","#b3e2cd","#fdcdac","#bebada");
-
-#create tick marks of y-axis
-alpha_breaks=seq(0, round(max(C$value)), by=0.5);
 
 #create plot
 bov_box=ggplot(data=C2, 
@@ -127,7 +121,7 @@ bov_box=ggplot(data=C2,
   labs(x = "",
        y = "Shannon Diversity",
        title="Bovids only")+
-  scale_y_continuous(breaks=alpha_breaks)+
+  ylim(3.4,7)+
   scale_fill_manual(values=my_col2)+
   theme(legend.position="none", 
         plot.title = element_text(size=14, face="bold"),

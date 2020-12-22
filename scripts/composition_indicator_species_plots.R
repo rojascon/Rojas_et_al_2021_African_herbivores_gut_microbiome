@@ -1,7 +1,7 @@
 #Manuscript: Host phylogeny and host ecology structure the mammalian gut microbiota 
 #at different taxonomic scales
 #Rojas et al. 2020
-#Code for plotting side barplots of bacterial species enriched in particular host groups
+#Code for plotting side barplots of bacterial species significantly
 #bacterial species identified using indicator species analysis
 
 source(file="scripts/background.R"); #load necessary packages and specifications
@@ -11,7 +11,7 @@ source(file="scripts/background.R"); #load necessary packages and specifications
 hf=read.table("data/indicator_taxa_host_families.txt", sep="\t");
 hg=read.table("data/indicator_taxa_host_dietguilds.txt", sep="\t");
 
-############################### CLEAN UP DATA FILE; VERY MESSY ###################
+############################### CLEAN UP DATA FILE WHICH IS VERY MESSY ###################
 #trim data frames to only pertinent data
 hf=as.data.frame(hf[12:44,]); 
 hg=as.data.frame(hg[10:41,]);
@@ -66,16 +66,19 @@ hguild$stat=as.numeric(as.character(hguild$stat));
 hfam$bacterial_family=as.character(hfam$bacterial_family);
 hguild$bacterial_family=as.character(hguild$bacterial_family);
 
-############################### PLOT BACTERIA TAXA ENRICHED IN HOST HERBIVORE FAMILIES ###################
+############################### PLOT BACTERIA TAXA ASSOCIATED WITH PARTICULAR###################
+############################### HERBIVORE HOSTS   ###############################
 #order levels of factor
 hfam$host_family=factor(hfam$host_family, 
                         levels=c("Giraffidae","Suidae","Equidae","Elephantidae"));
 
-#shorten bacterial taxa names
+hfam$host_family <- factor(hfam$host_family, levels = rev(levels(hfam$host_family)));
+
+#shorten one bacterial taxa name
 hfam$bacterial_family[hfam$bacterial_family=="Thermomicrobiales_JG30-KF-CM45"] = "Thermomicrobiales";
 
 #select color palette
-bar_col=c("#ffd92f","#1f78b4","#f781bf","palegreen");
+bar_col=c("palegreen","#f781bf","#1f78b4","#ffd92f");
 
 #plot sideways barplot
 ibarfam=ggplot(hfam, aes(x=bacterial_family, y=stat, fill=host_family))+ 
@@ -85,24 +88,30 @@ ibarfam=ggplot(hfam, aes(x=bacterial_family, y=stat, fill=host_family))+
   scale_y_continuous(breaks=c(0, 0.25, 0.50, 0.75,1))+
   scale_fill_manual(values = bar_col)+
   labs(x = "",
-       y = "Indicator Species statistic")+
+       y = "Indicator Species statistic",
+       fill="Associated with",
+       title="By host family")+
   theme_bw()+
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
+        plot.title=element_text(size=9, face="bold"),
         legend.key.size=unit(0.6, "cm"),
-        legend.text=element_text(size=7.2),
-        legend.title=element_blank(),
+        legend.text=element_text(size=9),
+        legend.title=element_text(size=9, face="bold"),
         legend.position ="bottom",
         legend.spacing.y = unit(0, "cm"),
         axis.text.x = element_text(size=10),
-        axis.text.y = element_text(size=10));
+        axis.text.y = element_text(size=8))+
+  guides(fill=guide_legend(nrow=2,byrow=TRUE));
+
+plot(ibarfam);
 
 ##save image 
 ggsave(filename="indicator_hostfamily.pdf",
        device="pdf",path="./figures",
        plot=ibarfam,
-       width=5.3,
+       width=4.8,
        height=4,
        units="in",
        dpi=500);
@@ -110,13 +119,14 @@ ggsave(filename="indicator_hostfamily.pdf",
 ############################### PLOT BACTERIA TAXA ENRICHED IN HOST HERBIVORE DIET GUILDS ###################
 #order levels of factor
 hguild$host_dietguild=factor(hguild$host_dietguild, 
-                        levels=c("grazer","browser","mixed_feeder"));
+                        levels=c("mixed_feeder","browser","grazer"));
 
-#shorten bacterial taxa names
-hguild$bacterial_family[hguild$bacterial_family=="Coriobacteriales_Incertae_Sedis"] = "Coriobacteriales_InSed";
+#shorten one bacterial taxa name
+hguild$bacterial_family[hguild$bacterial_family==
+                          "Coriobacteriales_Incertae_Sedis"] = "Coriobacteriales_InSed";
 
 #select color palette
-bar_col=c("#b3e2cd","#fdcdac","#bebada");
+bar_col=c("#bebada","#fdcdac","#b3e2cd");
 
 #plot sideways barplot
 ibarguild=ggplot(hguild, aes(x=bacterial_family, y=stat, fill=host_dietguild))+ 
@@ -126,24 +136,30 @@ ibarguild=ggplot(hguild, aes(x=bacterial_family, y=stat, fill=host_dietguild))+
   scale_y_continuous(breaks=c(0, 0.25, 0.50, 0.75,1))+
   scale_fill_manual(values = bar_col)+
   labs(x = "",
-       y = "Indicator Species statistic")+
+       y = "Indicator Species statistic",
+       fill="Associated with",
+       title="By host dietary guild")+
   theme_bw()+
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.background = element_blank(),
+        plot.title=element_text(size=9, face="bold"),
         legend.key.size=unit(0.6, "cm"),
         legend.text=element_text(size=9),
-        legend.title=element_blank(),
+        legend.title=element_text(size=9, face="bold"),
         legend.position ="bottom",
         legend.spacing.y = unit(0, "cm"),
         axis.text.x = element_text(size=10),
-        axis.text.y = element_text(size=10));
+        axis.text.y = element_text(size=8))+
+  guides(fill=guide_legend(nrow=2,byrow=TRUE));
+
+plot(ibarguild);
 
 ##save image 
 ggsave(filename="indicator_hostdietguild.pdf",
        device="pdf",path="./figures",
        plot=ibarguild,
-       width=5.3,
+       width=4.8,
        height=4,
        units="in",
        dpi=500);

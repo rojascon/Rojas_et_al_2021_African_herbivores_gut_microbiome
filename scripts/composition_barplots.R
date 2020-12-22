@@ -207,7 +207,7 @@ bargen=ggplot(data=gbar,
         axis.ticks.x=element_blank(),
         axis.text.x=element_blank(),
         strip.text = element_text(size =10, face="bold"))+
-  guides(fill=guide_legend(ncol=4,byrow=TRUE))
+  guides(fill=guide_legend(ncol=4,byrow=TRUE));
 
 plot(bargen);
 
@@ -219,4 +219,3 @@ ggsave(filename="barplot_bacterial_genera.pdf",
        height=7,
        units="in",
        dpi=500);
-

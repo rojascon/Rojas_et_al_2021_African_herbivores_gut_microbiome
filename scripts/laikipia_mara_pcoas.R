@@ -2,6 +2,7 @@
 #at different taxonomic scales
 #Rojas et al. 2020
 #MASAI MARA && LAIKIPIA DATA COMBINED
+
 #Code for constructing PCoAs based on beta-diversity distance matrices
 #Bray-Curtis (bray), Jaccard (jac), Weighted Unifrac (wuni), Unweighted Unifrac (unwuni)
 
@@ -15,7 +16,8 @@ load("data/laikipia_mara_filtered_metadata.Rdata");
 load("data/laikipia_mara_betadiv_dist_objects.Rdata");
 
 #######################  MAKE PCOA  ##############################
-#PCOA COLOR=HOST SPECIES AND SHAPE=HOST REGION
+#COLOR=HOST SPECIES 
+#SHAPE=HOST REGION
 
 #make PCoA coordinates
 pcoa_dec=cmdscale(bray.dist, eig=TRUE);  ##bray.dist, jac.dist, wuni.dist, unwuni.dist
@@ -31,14 +33,15 @@ ax2=format(pcoa_per[2], digits=2, nsmall=2);
 
 #color-palette
 my_col=c("#1b9e77", "#d95f02", "#e7298a","#225ea8",
-         "#ffd92f","#f781bf","#43a2ca","palegreen") 
+         "#ffd92f","#f781bf","#43a2ca","palegreen"); 
 
-#plot the PCoA-color coded by host family
+#plot the PCoA-color coded by host family, and shape indicates region
 LM_pcoa=ggplot(pcoa_met, aes(Axis1,Axis2, 
                              shape=factor(region, 
                                           labels=c("Masai Mara","Laikipia"))))+
-  geom_point(aes(colour=species_short), size = 2.5)+
+  geom_point(aes(colour=species_short), size = 2)+
   scale_colour_manual(values=my_col)+
+  scale_shape_manual(values = c(19,21))+
   labs(y=paste("PC2 (",ax2,"%)",sep=""),
        x=paste("PC1 (",ax1,"%)",sep=""),
        colour="",
@@ -58,7 +61,7 @@ LM_pcoa=ggplot(pcoa_met, aes(Axis1,Axis2,
 
 plot(LM_pcoa);
 
-ggsave(filename="laikipia_mara_pcoas.pdf",
+ggsave(filename="laikipia_mara_pcoa.pdf",
        device="pdf",path="./figures",
        plot=LM_pcoa,
        width=6,

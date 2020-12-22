@@ -1,7 +1,7 @@
 #Manuscript: Host phylogeny and host ecology structure the mammalian gut microbiota 
 #at different taxonomic scales
 #Rojas et al. 2020
-#Code for generating statistics of gut microbiota alpha-diversity values
+#Code for gut microbiota alpha-diversity statistics (linear models)
 
 source(file="scripts/background.R"); #load necessary packages and specifications
 #^^^also loads meta data
@@ -15,17 +15,19 @@ alphameta=merge(alphadiv, meta, by="Group");
 
 #remove baboon samples because not part of study
 alphameta=alphameta[alphameta$species_short!="Baboon",]; 
+alphameta$species_short=factor(alphameta$species_short, 
+                            levels=c("Buffalo","Cattle","Topi","Eland","Impala","Gazelle",
+                                     "Dikdik","Giraffe","Zebra","Warthog","Elephant"));
 #attach(alphameta);
 
-#run linear models of alpha diversity metric~ host predictor variables
+####################### RUN THE LINEAR MODELS  ##############################
+#run linear models of alpha diversity metric ~ host predictor variables
 #Chao1 Richness, Shannon diversity, Phylogenetic diversity
-all_herbivores=lmer(PD~  ##Chao1, Shannon, or PD
+
+all_herbivores=lmer(Shannon~  ##Chao1, Shannon, or PD
              diet_guild+
              Family+
-             rain_two_weeks+
-             tmax_two_weeks+
-             tmin_two_weeks+
-             (1|sample_month),
+             (1|sample_date),
            data=alphameta, na.action=na.fail);
 
 #run the same model but on bovids only
@@ -34,15 +36,11 @@ bov$species_short=factor(bov$species_short,
                          levels=c("Buffalo","Cattle","Topi","Eland",
                                   "Impala","Gazelle","Dikdik"))
   
-bovids_only=lmer(PD~   ##Chao1, Shannon, or PD
+bovids_only=lmer(Shannon~   ##Chao1, Shannon, or PD
                     diet_guild+
                     species_short+
-                    rain_two_weeks+
-                    tmax_two_weeks+
-                    tmin_two_weeks+
-                    (1|sample_month),
+                    (1|sample_date),
                   data=bov, na.action=na.fail);
-
 
 #view results and rsquared value of linear models
 print(summary(all_herbivores));
@@ -54,6 +52,7 @@ print(Anova(all_herbivores));
 print("Are predictors significant? (bovids only)");
 print(Anova(bovids_only));
 
+####################### RUN POST-HOC COMPARISONS  ##############################
 #conduct post-hoc comparisons with Bonferroni corrected pvalues
 #all herbivores-model
 print("Tukey PostHoc ~ Diet (all herbivores)");
@@ -77,4 +76,6 @@ print(summary(glht(bovids_only,
                    linfct=mcp(species_short="Tukey")),
               test=adjusted("BH")));
 
-
+##If getting the error message "number of items to replace is not a multiple 
+#of replacement length", rerun the "bovids_only" linear model but put the
+# host species term before the host diet term

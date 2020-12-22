@@ -2,7 +2,7 @@
 #at different taxonomic scales
 #Rojas et al. 2020
 #Code for calculating distance matrices for beta-diversity analyses
-#Bray-Curtis, Jaccard, Weighted Unifrac, Unweighted Unifrac
+#Bray-Curtis (bray), Jaccard (jac), Weighted Unifrac (wuni), Unweighted Unifrac (unwuni)
 #entire script will run in < 4 minutes
 
 source(file="scripts/background.R"); #load necessary packages and specifications
@@ -22,21 +22,24 @@ nrow(metadf)==nrow(asvdf);
 metadf=metadf[order(metadf$Group),]; 
 metadf$Family=factor(metadf$Family, 
                      levels=c("Bovidae","Giraffidae","Suidae","Equidae","Elephantidae"));
-save(metadf, file="data/sample_metadata_beta.Rdata")
+metadf$species_short=factor(metadf$species_short, 
+                     levels=c("Buffalo","Cattle","Topi","Eland","Impala","Gazelle",
+                              "Dikdik","Giraffe","Zebra","Warthog","Elephant"));
+save(metadf, file="data/sample_metadata_beta.Rdata");
 
 ######################### ALL HERBIVORES distance matrices  ##########################
-###BRAY-CURTIS distances
+###BRAY-CURTIS distance
 bray<-apply(asvdf, 1, function(i) (i/sum(i)));
 bray=as.data.frame(t(bray));
 print(rowSums(bray));
 bray.dist=vegdist(bray, method="bray");
 
-###JACCARD distances
+###JACCARD distance
 jac=(asvdf>0)*1;
 print(rowSums(jac));
 jac.dist=vegdist(jac, method="jaccard");
 
-###WEIGHTED UNIFRAC distances
+###WEIGHTED UNIFRAC distance
 #load phylogenetic tree of ASVs needed to calculate Unifrac distances
 #see script "get_ASV_phylotree_beta.R" for how to generate
 load("data/ASV_phylotree_betadiv.Rdata");
@@ -46,7 +49,7 @@ wuni.dist=UniFrac(wuni,
                   weighted=TRUE, 
                   normalized=TRUE);
 
-###UNWEIGHTED UNIFRAC distances
+###UNWEIGHTED UNIFRAC distance
 unwuni<-phyloseq(otu_table(asvdf, taxa_are_rows=FALSE),
                  phy_tree(fitGTR$tree));
 unwuni.dist=UniFrac(unwuni, 
@@ -60,7 +63,7 @@ metabovdf=metadf[metadf$Family=="Bovidae",]
 #remove non-bovid samples from ASV table
 asvbovdf=asvdf[rownames(asvdf) %in% metabovdf$Group,]; 
   
-###BRAY-CURTIS distances
+###BRAY-CURTIS distance
 braybov<-apply(asvbovdf, 1, function(i) (i/sum(i)));
 braybov=as.data.frame(t(braybov));
 print(rowSums(braybov));
@@ -71,14 +74,14 @@ jacbov=(asvbovdf>0)*1;
 print(rowSums(jacbov));
 jacbov.dist=vegdist(jacbov, method="jaccard");
 
-###Weighted Unifrac
+###WEIGHTED UNIFRAC distance
 wunibov<-phyloseq(otu_table(asvbovdf, taxa_are_rows=FALSE), 
                phy_tree(fitGTR$tree));
 wunibov.dist=UniFrac(wunibov, 
                      weighted=TRUE, 
                      normalized=TRUE);
 
-###Unweighted Unifrac
+###UNWEIGHTED UNIFRAC distance
 unwunibov<-phyloseq(otu_table(asvbovdf, taxa_are_rows=FALSE),
                  phy_tree(fitGTR$tree));
 unwunibov.dist=UniFrac(unwunibov, 
@@ -87,14 +90,16 @@ unwunibov.dist=UniFrac(unwunibov,
 
 ######################### DIETARY GUILD distance matrices  ##########################
 ###################these are for making PCoAs for each dietary guild###############
+########### one for only grazers, another for only browsers, a third for mixed feeders ####
+
 ###GRAZERS
-#remove non-grazer samples from meta data 
+#select only grazer samples from metadata 
 metagrazerdf=metadf[metadf$diet_guild=="grazer",];
 
-#remove non-grazer samples from ASV table
+#select only grazer samples from ASV table
 asvgrazerdf=asvdf[rownames(asvdf) %in% metagrazerdf$Group,]; 
 
-###BRAY-CURTIS distances
+###BRAY-CURTIS distance
 braygrazer<-apply(asvgrazerdf, 1, function(i) (i/sum(i)));
 braygrazer=as.data.frame(t(braygrazer));
 print(rowSums(braygrazer));
@@ -105,14 +110,14 @@ jacgrazer=(asvgrazerdf>0)*1;
 print(rowSums(jacgrazer));
 jacgrazer.dist=vegdist(jacgrazer, method="jaccard");
 
-###Weighted Unifrac
+###WEIGHTED UNIFRAC distance
 wunigrazer<-phyloseq(otu_table(asvgrazerdf, taxa_are_rows=FALSE), 
                   phy_tree(fitGTR$tree));
 wunigrazer.dist=UniFrac(wunigrazer, 
                      weighted=TRUE, 
                      normalized=TRUE);
 
-###Unweighted Unifrac
+###UNWEIGHTED UNIFRAC distance
 unwunigrazer<-phyloseq(otu_table(asvgrazerdf, taxa_are_rows=FALSE),
                     phy_tree(fitGTR$tree));
 unwunigrazer.dist=UniFrac(unwunigrazer, 
@@ -120,13 +125,13 @@ unwunigrazer.dist=UniFrac(unwunigrazer,
                        normalized=TRUE);
 
 ###BROWSERS
-#remove non-browser samples from meta data 
+#select only browser samples from metadata 
 metabrowserdf=metadf[metadf$diet_guild=="browser",];
 
-#remove non-browser samples from ASV table
+#select only browser samples from ASV table
 asvbrowserdf=asvdf[rownames(asvdf) %in% metabrowserdf$Group,]; 
 
-###BRAY-CURTIS distances
+###BRAY-CURTIS distance
 braybrowser<-apply(asvbrowserdf, 1, function(i) (i/sum(i)));
 braybrowser=as.data.frame(t(braybrowser));
 print(rowSums(braybrowser));
@@ -137,14 +142,14 @@ jacbrowser=(asvbrowserdf>0)*1;
 print(rowSums(jacbrowser));
 jacbrowser.dist=vegdist(jacbrowser, method="jaccard");
 
-###Weighted Unifrac
+###WEIGHTED UNIFRAC distance
 wunibrowser<-phyloseq(otu_table(asvbrowserdf, taxa_are_rows=FALSE), 
                      phy_tree(fitGTR$tree));
 wunibrowser.dist=UniFrac(wunibrowser, 
                         weighted=TRUE, 
                         normalized=TRUE);
 
-###Unweighted Unifrac
+###UNWEIGHTED UNIFRAC distance
 unwunibrowser<-phyloseq(otu_table(asvbrowserdf, taxa_are_rows=FALSE),
                        phy_tree(fitGTR$tree));
 unwunibrowser.dist=UniFrac(unwunibrowser, 
@@ -152,13 +157,13 @@ unwunibrowser.dist=UniFrac(unwunibrowser,
                           normalized=TRUE);
 
 ###MIXED-FEEDERS
-#remove non-browser samples from meta data 
+#select only mixed-feeder samples from meta data 
 metamixedfeeddf=metadf[metadf$diet_guild=="mixed_feeder",];
 
-#remove non-browser samples from ASV table
+#select only mixed-feedersamples from ASV table
 asvmixedfeeddf=asvdf[rownames(asvdf) %in% metamixedfeeddf$Group,]; 
 
-###BRAY-CURTIS distances
+###BRAY-CURTIS distance
 braymixedfeed<-apply(asvmixedfeeddf, 1, function(i) (i/sum(i)));
 braymixedfeed=as.data.frame(t(braymixedfeed));
 print(rowSums(braymixedfeed));
@@ -169,14 +174,14 @@ jacmixedfeed=(asvmixedfeeddf>0)*1;
 print(rowSums(jacmixedfeed));
 jacmixedfeed.dist=vegdist(jacmixedfeed, method="jaccard");
 
-###Weighted Unifrac
+###WEIGHTED UNIFRAC distance
 wunimixedfeed<-phyloseq(otu_table(asvmixedfeeddf, taxa_are_rows=FALSE), 
                       phy_tree(fitGTR$tree));
 wunimixedfeed.dist=UniFrac(wunimixedfeed, 
                          weighted=TRUE, 
                          normalized=TRUE);
 
-###Unweighted Unifrac
+###UNWEIGHTED UNIFRAC distance
 unwunimixedfeed<-phyloseq(otu_table(asvmixedfeeddf, taxa_are_rows=FALSE),
                         phy_tree(fitGTR$tree));
 unwunimixedfeed.dist=UniFrac(unwunimixedfeed, 

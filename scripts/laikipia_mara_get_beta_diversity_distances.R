@@ -2,8 +2,9 @@
 #at different taxonomic scales
 #Rojas et al. 2020
 #MASAI MARA && LAIKIPIA DATA COMBINED
+
 #Code for calculating distance matrices for beta-diversity analyses
-#Bray-Curtis, Jaccard, Weighted Unifrac, Unweighted Unifrac
+#Bray-Curtis (bray), Jaccard (jac), Weighted Unifrac (wuni), Unweighted Unifrac (unwuni)
 #entire script will run in < 4 minutes
 
 source(file="scripts/background.R"); #load necessary packages and specifications
@@ -16,18 +17,18 @@ load("data/laikipia_mara_filtered_metadata.Rdata");
 nrow(metadf)==nrow(asv.tbl);
 
 ######################### CALCULATE DISTANCE MATRICES  ##########################
-###BRAY-CURTIS distances
+###BRAY-CURTIS distance
 bray<-apply(asv.tbl, 1, function(i) (i/sum(i)));
 bray=as.data.frame(t(bray));
 print(rowSums(bray));
 bray.dist=vegdist(bray, method="bray");
 
-###JACCARD distances
+###JACCARD distance
 jac=(asv.tbl>0)*1;
 print(rowSums(jac));
 jac.dist=vegdist(jac, method="jaccard");
 
-###WEIGHTED UNIFRAC distances
+###WEIGHTED UNIFRAC distance
 #load phylogenetic tree of ASVs needed to calculate Unifrac distances
 #see script "laikipia_mara_get_ASV_phylotree_beta.R" for how to generate
 load("data/ASV_phylotree_betadiv.Rdata");
@@ -37,7 +38,7 @@ wuni.dist=UniFrac(wuni,
                   weighted=TRUE, 
                   normalized=TRUE);
 
-###UNWEIGHTED UNIFRAC distances
+###UNWEIGHTED UNIFRAC distance
 unwuni<-phyloseq(otu_table(asv.tbl, taxa_are_rows=FALSE),
                  phy_tree(fitGTR$tree));
 unwuni.dist=UniFrac(unwuni, 

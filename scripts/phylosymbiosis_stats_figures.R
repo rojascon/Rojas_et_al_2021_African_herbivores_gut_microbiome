@@ -2,7 +2,7 @@
 #at different taxonomic scales
 #Rojas et al. 2020
 #Code for testing phylosymbiosis (mantel tests of host divergence time vs. 
-#host microbiota dissimilarity) and generating accompanying scatterplots
+#host microbiota dissimilarity) and generating accompanying plots (scatterplot, dendogram)
 
 source(file="scripts/background.R"); #load necessary packages and specifications
 
@@ -10,7 +10,7 @@ source(file="scripts/background.R"); #load necessary packages and specifications
 #see script "get_host_divergence_times.R"
 load("data/host_divergence_times.Rdata");
 
-#load gut microbiota distance matrices built for this mantel test
+#load gut microbiota distance matrices generated specifically for this mantel test
 #see script "get_mantel_distances.R"
 #one set of distance matrices for all herbivores; another set for bovids only
 load("data/mantel_dist_objects.Rdata");
@@ -25,7 +25,6 @@ mantel(divergence_times, mantelbrayall,
        method="spear", 
        permutations=999); 
 
-
 #run mantel test---bovids only
 divergence_times_bov=divergence_times[c(1:4,7:8,10),c(1:4,7:8,10)];
 
@@ -37,11 +36,11 @@ mantel(divergence_times_bov, mantelbraybov,
        permutations=999);
 
 ######################## PHYLOSYMBIOSIS SCATTERPLOTS ##########################
-#############scatterplot -- all herbivores
+#############  scatterplot -- all herbivores ###################
 
 #reorganize data frame so its structured as follows:
 #host sp 1 | host sp 2 | divergence time | microbiota distance
-#reflects pairwise comparisons
+#to reflect pairwise comparisons
 
 divt=tibble::rownames_to_column(as.data.frame(divergence_times), 
                                  "taxon_1");
@@ -53,7 +52,7 @@ micro=tibble::rownames_to_column(as.data.frame(micro),
                                  "taxon_1"); 
 micro2=gather(micro, key="taxon_2", value="dissimi", -taxon_1);
 
-#check contents match before combining the two data frames
+#check that contents match before combining the two data frames
 divt2$taxon_1==micro2$taxon_1; 
 divt2$taxon_2==micro2$taxon_2;
 
@@ -82,7 +81,7 @@ hps=ggplot(allherb_phylo,aes(x=div_time, y=distance))+
 plot(hps);
 
 ######################## PHYLOSYMBIOSIS SCATTERPLOTS ##########################
-#############scatterplot -- bovids only
+#############  scatterplot -- bovids only ###################
 
 #reorganize data frame so its structured as follows:
 #host sp 1 | host sp 2 | divergence time | microbiota distance
@@ -127,13 +126,43 @@ bps=ggplot(bov_phylo,aes(x=div_time, y=distance))+
 plot(bps);
 
 ########SAVE YOUR FIGURE
-symbio=arrangeGrob(hps, bps, nrow=1); 
+symbio=arrangeGrob(hps, bps, nrow=1); plot(symbio);
 
 ggsave(filename="phylosymbiosis_scatterplot.pdf",
        device="pdf",path="./figures",
        plot=symbio,
-       width=7.5,
+       width=8,
        height=3.5,
        units="in",
        dpi=500);
 
+#################### BUILDING GUT MICROBIOTA DENDOGRAM ################
+#apply hiearchical clustering to distance matrix
+hr=hclust(mantelunifracall, method="average");
+
+#load necessary packages
+library(ape);
+
+#rotate dendogram at node 14
+rt.14 <- rotate(as.phylo(hr), 14);
+
+#plot dendogram
+plot.phylo(as.phylo(hr), type="p", 
+           edge.col=1, edge.width=1.5, font=1,
+           direction="leftwards",
+           label.offset=0.005,show.node.label=TRUE, 
+           no.margin=F);
+
+##plot slightly rotated dendogram
+plot.phylo(rt.14, type="p", 
+           edge.col=1, edge.width=1.5, font=1,
+           direction="leftwards",
+           label.offset=0.005,show.node.label=TRUE, 
+           no.margin=F);
+
+###^trees are the same, except in rotated tree we switched the 
+#elephant vs. warthog/zebra polytomy
+##so that elephant node is on top and the other two below it
+##clustering relationships remain unchanged!
+
+#save manually: export > Save as PDF> save in "figures" folder

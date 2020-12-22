@@ -29,7 +29,8 @@ colnames(asv_tax)[1]="ASV";
 
 
 #######################  PREPARE ASV TABLE FOR INDICATOR SPECIES ANALYSIS ##############################
-################# TO IDENTIFY BACTERIAL FAMILIES THAT MAY BE ENRICHED IN PARTICULAR HOST GROUPS #################
+################# TO IDENTIFY BACTERIAL FAMILIES THAT ARE SINIGICANTLY ASSOCIATED #################
+################# WITH PARTICULAR HERBIVORE HOSTS OR DIETS #################
 
 #select bacterial taxonomic rank 
 family=asv_tax[,which(names(asv_tax) 
@@ -51,7 +52,7 @@ nrow(famt)==nrow(metadf)
 
 #get list of bacterial taxa that may be differentially abundant among host families
 #pay attention only to results from: Group Giraffidae, Group Suidae, 
-#Group Equidae, Group Elephantidae
+#Group Equidae, Group Elephantidae (NO INTERACTION TERMS)
 indbac=multipatt(famt, metadf$Family, control=how(nperm=999))
 summary(indbac)
 
@@ -62,6 +63,7 @@ sink();
 
 #get list of bacterial taxa that may be differentially abundant among host dietary guilds
 #pay attention only to results from: Group grazers, Group browsers, Group mixed_feeders
+#NO INTERACTION TERMS
 indbac=multipatt(famt, metadf$diet_guild, control=how(nperm=999))
 summary(indbac)
 
