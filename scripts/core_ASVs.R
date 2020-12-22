@@ -105,24 +105,29 @@ pheatmap(
 #these ASVs mostly associate with one particular host species
 
 #find the ASVs present >75% of samples for a host species
-mysamples=as.character(metadf$Group[metadf$species_short=="Zebra"]) #select your host species
+mysamples=as.character(metadf$Group
+                       [metadf$species_short=="Zebra"]); #select your host species
 cpsp=cp[,which(colnames(cp) %in% mysamples)];
-lim=round(0.75*ncol(cpsp))
-myASVs=cpsp[rowSums(cpsp)>=lim,]
+lim=round(0.75*ncol(cpsp));
+myASVs=cpsp[rowSums(cpsp)>=lim,];
 
 #find the ASVs present in <3% of remaining samples
-other=as.character(metadf$Group[metadf$species_short!="Zebra"]) #same host species here
-cpot=cp[,colnames(cp) %in% other,]
-otlim=round(0.03*ncol(cpot))
-rareASVs=cpot[rowSums(cpot)<=otlim,]
+other=as.character(metadf$Group
+                   [metadf$species_short!="Zebra"]); #same host species here
+cpot=cp[,colnames(cp) %in% other,];
+otlim=round(0.03*ncol(cpot));
+rareASVs=cpot[rowSums(cpot)<=otlim,];
 
 #find the overlap in the two data frames
 # aka find ASVs present >75% of samples for that host sp 
 #AND in <3% of remaining samples
-list_of_data = list(myASVs,rareASVs)
-finalASVs= Reduce(intersect, lapply(list_of_data, row.names)) 
+list_of_data = list(myASVs,rareASVs);
+finalASVs= Reduce(intersect, 
+                  lapply(list_of_data, row.names)); 
 
 #calculate the percent of ASVs biased towards that host species
 #basically dividing the number of ASVs that meet both criteria / by the number of ASVs that meet the first criterion
-value1=length(finalASVs)/nrow(myASVs) 
-print(value1*100)
+value1=length(finalASVs)/
+  nrow(myASVs); 
+
+print(value1*100);
