@@ -93,6 +93,9 @@ lefse$species=factor(lefse$species, levels=c("Buffalo", "Cattle", "Eland",
 lefse$padjusted=p.adjust(lefse$pvalue, method="BH");
 lefse=lefse[lefse$label!="NA",];
 
+#see taxonomic distribution of enriched ASVs
+table(lefse$taxa);
+
 #only retain ASVs with LDA > 3.2 for plotting purposes
 #you can set this cutoff as any value between 2 and 4.30
 lefse2=lefse[lefse$padjusted<0.05,];

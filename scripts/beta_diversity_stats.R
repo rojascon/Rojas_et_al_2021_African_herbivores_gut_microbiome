@@ -72,7 +72,7 @@ print(adonis(jac.dist~                 ##bray.dist, jac.dist
              permutations = 999));
 
 print("UNIFRAC: PERMANOVA controlling for dietary guild, all herbivores");
-print(adonis(wuni.dist~               ##wuni.dist, unwuni.dist
+print(adonis(unwuni.dist~               ##wuni.dist, unwuni.dist
               sample_month+
               species_short,  
             strata=metadf$diet_guild, 

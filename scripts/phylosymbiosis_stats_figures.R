@@ -1,8 +1,11 @@
 #Manuscript: Host phylogeny and host ecology structure the mammalian gut microbiota 
 #at different taxonomic scales
 #Rojas et al. 2020
-#Code for testing phylosymbiosis (mantel tests of host divergence time vs. 
-#host microbiota dissimilarity) and generating accompanying plots (scatterplot, dendogram)
+#Code for testing phylosymbiosis (mantel tests of host microbiota dissimilarity vs. 
+#host divergence time) and generating accompanying plots (scatterplot, dendogram)
+
+#Also includes code for testing phylosymbiosis while controlling for dietary similarity (partial mantel
+#tests of host microbiota dissimilarity vs host divergence time vs. host dietary dissimilarity)
 
 source(file="scripts/background.R"); #load necessary packages and specifications
 
@@ -16,12 +19,13 @@ load("data/host_divergence_times.Rdata");
 load("data/mantel_dist_objects.Rdata");
 
 ######################## RUN MANTEL TESTS ##########################
+##gut microbiota dissimilarity (0-1) vs. host divergence times (mya)
 
 #run mantel test---all herbivores
 colnames(divergence_times)==
   colnames(as.matrix(mantelbrayall)); #mantelbrayall, manteljacall, mantelunifracall, mantelunwunifracall
 
-mantel(divergence_times, mantelbrayall, 
+mantel(mantelbrayall, divergence_times, 
        method="spear", 
        permutations=999); 
 
@@ -31,9 +35,39 @@ divergence_times_bov=divergence_times[c(1:4,7:8,10),c(1:4,7:8,10)];
 colnames(divergence_times_bov)==
   colnames(as.matrix(mantelbraybov));
 
-mantel(divergence_times_bov, mantelbraybov,
+mantel(mantelbraybov,divergence_times_bov, #mantelbraybov, manteljacbov, mantelunifracbov, mantelunwunifracbov
        method="spear", 
        permutations=999);
+
+######################## RUN PARTIAL MANTEL TESTS ##########################
+##gut microbiota dissimilarity (0-1) vs. host divergence times (mya) while controlling 
+#for dietary dissimilarity (%C4)
+
+#ALL HERBIVORES
+#make a data frame with host %C4 intake
+diet=data.frame(C4=c(87,2,55,97,41,92,11,92,5,68,91));
+rownames(diet)=rownames(divergence_times);
+
+#make distance matrix of host %C4
+C4.dist=vegdist(diet, method="bray");
+
+#run partial mantel test
+mantel.partial(mantelunwunifracall, divergence_times, #mantelbrayall, manteljacall, mantelunifracall, mantelunwunifracall
+               C4.dist,
+               method="spear", 
+               permutations=999);
+
+
+#BOVIDS ONLY
+#make distance matrix of host %C4 intake for bovids only
+C4.dist=as.matrix(C4.dist);
+C4.bov.dist=C4.dist[c(1:4,7:8,10),c(1:4,7:8,10)];
+
+#run partial mantel test
+mantel.partial(mantelunwunifracbov, divergence_times_bov, #mantelbraybov, manteljacbov, mantelunifracbov, mantelunwunifracbov
+               C4.bov.dist,
+               method="spear", 
+               permutations=999);
 
 ######################## PHYLOSYMBIOSIS SCATTERPLOTS ##########################
 #############  scatterplot -- all herbivores ###################
@@ -139,30 +173,43 @@ ggsave(filename="phylosymbiosis_scatterplot.pdf",
 #################### BUILDING GUT MICROBIOTA DENDOGRAM ################
 #apply hiearchical clustering to distance matrix
 hr=hclust(mantelunifracall, method="average");
+hr=as.phylo(hr);
 
 #load necessary packages
 library(ape);
 
-#rotate dendogram at node 14
-rt.14 <- rotate(as.phylo(hr), 14);
+#view numbered tree nodes
+plot(hr,font=1); nodelabels(bg="white")
+
+#rotate dendogram slightly
+rt.14 <- rotate((hr), 12);
+rt.14b <- rotate(rt.14, 13);
+rt.14c <- rotate(rt.14b, 16);
+rt.14d <- rotate(rt.14c, 17);
+rt.14e <- rotate(rt.14d, 19);
+rt.14f <- rotate(rt.14e, 20);
+rt.14g <- rotate(rt.14f, 20); 
+rt.14h <- rotate(rt.14g, 18);
 
 #plot dendogram
-plot.phylo(as.phylo(hr), type="p", 
+plot.phylo(hr, type="p", 
            edge.col=1, edge.width=1.5, font=1,
            direction="leftwards",
            label.offset=0.005,show.node.label=TRUE, 
            no.margin=F);
 
 ##plot slightly rotated dendogram
-plot.phylo(rt.14, type="p", 
+plot.phylo(rt.14h, type="p", 
            edge.col=1, edge.width=1.5, font=1,
            direction="leftwards",
-           label.offset=0.005,show.node.label=TRUE, 
+           label.offset=0.005,show.node.label=TRUE,
+           show.tip.label=T,
            no.margin=F);
 
 ###^trees are the same, except in rotated tree we switched the 
 #elephant vs. warthog/zebra polytomy
-##so that elephant node is on top and the other two below it
+#rotated the gaelle, topi, impala polytomy
+#moved the elephant,zebra, warthog node to the bottom
 ##clustering relationships remain unchanged!
 
 #save manually: export > Save as PDF> save in "figures" folder

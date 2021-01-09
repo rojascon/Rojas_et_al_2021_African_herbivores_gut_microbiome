@@ -37,9 +37,11 @@ colnames(core)[ncol(core)]="taxa";
 
 #convert ASV abundance table to ASV presence/absence
 cp=core; rownames(cp)=cp$taxa; cp$taxa=NULL;
+cp$seqs=rowSums(cp); cp=cp[cp$seqs>2,]; cp$seqs=NULL;
 cp=(cp>0)*1; 
 cp=as.data.frame(cp);
 
+min(rowSums(cp))
 #identify ASVs present indiscriminantly across 90% of samples
 cutoff=round(0.90*ncol(cp));
 cp1=cp[rowSums(cp)>cutoff,];
@@ -106,14 +108,14 @@ pheatmap(
 
 #find the ASVs present >75% of samples for a host species
 mysamples=as.character(metadf$Group
-                       [metadf$species_short=="Zebra"]); #select your host species
+                       [metadf$species_short=="Eland"]); #select your host species
 cpsp=cp[,which(colnames(cp) %in% mysamples)];
 lim=round(0.75*ncol(cpsp));
 myASVs=cpsp[rowSums(cpsp)>=lim,];
 
 #find the ASVs present in <3% of remaining samples
 other=as.character(metadf$Group
-                   [metadf$species_short!="Zebra"]); #same host species here
+                   [metadf$species_short!="Eland"]); #same host species here
 cpot=cp[,colnames(cp) %in% other,];
 otlim=round(0.03*ncol(cpot));
 rareASVs=cpot[rowSums(cpot)<=otlim,];

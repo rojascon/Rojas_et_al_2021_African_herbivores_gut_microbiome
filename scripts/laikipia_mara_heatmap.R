@@ -41,6 +41,7 @@ colnames(core)[ncol(core)]="taxa";
 
 #convert ASV abundance table to ASV presence/absence
 cp=core; rownames(cp)=cp$taxa; cp$taxa=NULL;
+cp$seqs=rowSums(cp); cp=cp[cp$seqs>2,]; cp$seqs=NULL;
 cp=(cp>0)*1; 
 cp=as.data.frame(cp);
 
