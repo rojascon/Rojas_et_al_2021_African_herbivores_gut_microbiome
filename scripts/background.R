@@ -23,4 +23,7 @@ meta$species_short=factor(meta$species_short,
                           levels=c("Buffalo","Cattle","Topi","Eland","Impala","Gazelle",
                                                        "Dikdik","Giraffe","Zebra","Warthog","Elephant","Baboon"))
 meta$diet_guild=factor(meta$diet_guild, 
-                       levels=c("grazer","browser","mixed_feeder"))
+                       levels=c("grazer","browser","mixed_feeder"));
+
+#check version of your loaded packages
+#packageVersion('ape')
