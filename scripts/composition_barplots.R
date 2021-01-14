@@ -164,9 +164,9 @@ gen=aggregate(.~taxa, gen, sum);
 gen[,-1] <- lapply(gen[,-1], function(x) (x/sum(x))*100);
 print(colSums(gen[-1]));
 
-#keep genilies >1% relative abundance across samples
+#keep genera >0.9% relative abundance across samples
 gen$AVG=rowMeans(gen[,-1]);
-gen=gen[gen$AVG>1,];
+gen=gen[gen$AVG>0.9,];
 gen$AVG=NULL;
 
 #denote the rest of phyla as "Other"
@@ -182,8 +182,8 @@ gbar=merge(gbar, meta, by="Group");
 
 #color-palette
 gen_col=c("#771155", "#AA4488", "#CC99BB", "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", 
-          "#77CCCC", "#117744", "grey", "#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", 
-          "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788","#737373","grey","black")
+          "#737373","#77CCCC","#117744","#88CCAA", "#777711", "#AAAA44", "#DDDD77", "#774411", 
+          "#AA7744", "#DDAA77", "#771122", "#AA4455", "#DD7788","black","grey")
 
 #create plot
 bargen=ggplot(data=gbar, 
@@ -207,7 +207,7 @@ bargen=ggplot(data=gbar,
         axis.ticks.x=element_blank(),
         axis.text.x=element_blank(),
         strip.text = element_text(size =10, face="bold"))+
-  guides(fill=guide_legend(ncol=4,byrow=TRUE));
+  guides(fill=guide_legend(ncol=4,byrow=FALSE));
 
 plot(bargen);
 
