@@ -16,6 +16,7 @@
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
 
+
 ################################################################################
 #             1. Load beta diversity distance matrices (e.g. dissimilarity matrices) 
 #                         & filtered metadata table                 
@@ -29,7 +30,7 @@ load("data/05_dissimilarity_distances_beta.Rdata")
 ################################################################################
 #basically asking, does gut microbiota structure vary with sample month, host
 #dietary guild, host family, and host species?
-#because the same test is done on each type of distance matrix [4x total], we
+#because the same test is done on each type of distance matrix [4 total], we
 #will use a for loop
 
 #set variables for for loop
@@ -52,7 +53,7 @@ for(i in 1:4)
 };
 
 ################################################################################
-#             2. conduct PERMANOVAs -- BOVIDS ONLY                
+#             3. conduct PERMANOVAs -- BOVIDS ONLY                
 ################################################################################
 #same tests as above, but restricting dataset to bovids only
 

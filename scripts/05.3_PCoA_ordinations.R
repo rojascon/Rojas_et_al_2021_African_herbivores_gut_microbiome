@@ -27,8 +27,8 @@ load("data/05_dissimilarity_distances_beta.Rdata")
 
 ################################################################################
 #             2. make PCoA ordination -- ALL HERBIVORES  
-#       color coded by host herbivore family or host dietary guild
-#       using Bray-Curtis distances, but code works for any distance matrix
+#       points are color coded by host family or host dietary guild
+#       uses Bray-Curtis distances, but any distance matrix works
 ################################################################################
 
 #calculate coordinates for PCoA
@@ -106,8 +106,8 @@ ggsave(filename="05_betadiv_pcoas_allherbivores.pdf",
 
 ################################################################################
 #             3. make PCoA ordination -- BOVIDS ONLY  
-#       color coded by host herbivore species or host dietary guild
-#       using Bray-Curtis distances, but code works for any distance matrix
+#       cpoints olor coded by host species or host dietary guild
+#       uses Bray-Curtis distances, but any distance matrix works
 ################################################################################
 
 #make bovid specific data-frame

@@ -29,8 +29,8 @@ meta=read.csv("data/00_sample_metadata.csv", stringsAsFactors = F);
 tax=read.csv("data/00_ASV_taxonomy_silva_v132.csv", header=T, row.names=1); 
 
 ################################################################################
-#             1. Remove Baboon samples and samples that did not sequence well 
-#                 from metadata table
+#             2. Remove Baboon samples and samples that did not sequence well 
+#                 from metadata table; format metadata factors
 ################################################################################
 meta=meta[meta$species_short!="Baboon",];
 
@@ -60,8 +60,8 @@ meta=meta[order(meta$Group),];
 
 
 ################################################################################
-#             2. Remove Baboon samples and samples that did not sequence well 
-#                 from ASV table
+#             3. Remove Baboon samples and samples that did not sequence well 
+#                 from ASV table;
 ################################################################################
 #clean up sample names in ASV table
 asvdf=as.data.frame(seqtab.nochim);
@@ -84,7 +84,7 @@ asvpa=asvpa[asvpa$sm>0,];
 asvdf=asvdf[,colnames(asvdf) %in% rownames(asvpa)];
 
 ################################################################################
-#             2. save filtered ASV table and filtered meta_data
+#             4. save filtered ASV table and filtered meta_data
 ################################################################################
 save(asvdf, file="data/01_ASV_table_filtered.Rdata");
 save(meta, file="data/01_sample_metadata_filtered.Rdata");

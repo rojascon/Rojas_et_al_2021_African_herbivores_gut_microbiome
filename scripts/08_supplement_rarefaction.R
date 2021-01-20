@@ -30,15 +30,18 @@ source(file="scripts/00_background.R"); #load necessary packages and specificati
 #       rarefaction.single(shared=07_output.mothur.txt, calc=sobs, freq=1)
 #Code will take a few minutes to run
 
-#Step3: rename output file as "08_mothur.rarefaction.txt" and place in the 
+#Step3: rename output file as "08_mothur_rarefaction.txt" and place in the 
 #data directory
 
 ################################################################################
 #             2. Clean and arrange data for ggplot2                 
 ################################################################################
 #read in data output from mothur after rarefaction
-mrare=read.table("data/08_mothur.rarefaction.txt", 
+mrare=read.table("data/08_mothur_rarefaction.txt", 
                               sep="\t", header=TRUE);
+
+#load sample metadata
+load("data/01_sample_metadata_filtered.Rdata")
 
 #clean up rarefaction curve data
 raref=mrare[, grepl("X0.03.*",names(mrare))]; 
@@ -57,13 +60,12 @@ rare_meta=merge(rf, meta, by="Group");
 #             3. Make plot of sample rarefaction curves                 
 ################################################################################
 
-#save color gradient (1 color for each host species)
+#set color-palette (1 color for each host species)
 my_col=c("#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462",
          "#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f");
 
-#set tick marks for x-axis and y-axis
-reads=seq(0, nrow(mothur_rarefaction), by=2500);
-otus=seq(0, max(mothur_rarefaction[-1]), by=400);
+#set tick marks for x-axis 
+reads=seq(0, nrow(mrare), by=2500);
 
 #plot! 
 rfc=ggplot(data=rare_meta) + 
@@ -73,7 +75,6 @@ rfc=ggplot(data=rare_meta) +
                         group=Group))+ 
   scale_x_continuous(breaks=reads)+
   lims(y=c(0,17000))+
-  #scale_y_continuous(breaks=otus)+ 
   scale_colour_manual(values=my_col)+
   labs(x = "Number of Reads",
        y = "ASV Richness",
@@ -102,4 +103,4 @@ ggsave(filename="08_rarefaction_curves.pdf",
        width=9,
        height=6,
        units="in",
-       dpi=500)
+       dpi=500);

@@ -12,9 +12,10 @@
 ################################################################################
 
 ##CODE FOR: generating stacked bar plots of gut microbiota composition
-# at the phylum, family, and genus taxonomic level
+# at the bacterial phylum, family, and genus taxonomic level
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
+
 
 ################################################################################
 #             1. Load filtered ASV abundance table, ASV taxonomy table and 
@@ -98,8 +99,9 @@ ggsave(filename="02_barplot_bacterial_phylum.pdf",
        units="in",
        dpi=500);
 
+
 ################################################################################
-#             2. Create Family level composition barplots                 
+#             3. Create Family level composition barplots                 
 ################################################################################
 #select bacterial taxonomic rank 
 fam=asv_tax[,which(names(asv_tax) 
@@ -165,8 +167,9 @@ ggsave(filename="02_barplot_bacterial_family.pdf",
        units="in",
        dpi=500);
 
+
 ################################################################################
-#             2. Create Genus level composition barplots                 
+#             4. Create Genus level composition barplots                 
 ################################################################################
 #select bacterial taxonomic rank 
 gen=asv_tax[,which(names(asv_tax) 

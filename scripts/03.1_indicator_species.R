@@ -11,8 +11,11 @@
 #
 ################################################################################
 
-##CODE FOR: identifying the list of bacterial families that are significantly 
-#associated with particular herbivore groups as determined by indicator species analysis
+##CODE FOR: identifying the bacterial families that are significantly 
+#associated with particular:
+#A) herbivore families
+#B) herbivore dietary guilds 
+# as determined by indicator species analysis
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
 
@@ -58,11 +61,11 @@ famt=as.data.frame(t(fam));
 #Group Equidae, Group Elephantidae (NO INTERACTION TERMS)
 
 indbac=multipatt(famt, meta$Family, control=how(nperm=999));
-summary(indbac);
+#print(summary(indbac));
 
 #save findings to a text file
 sink("data/03_indicator_taxa_host_families.txt");
-print(summary(indbac));
+summary(indbac);
 sink(); 
 
 
@@ -75,10 +78,10 @@ sink();
 #pay attention only to results from: Group grazers, Group browsers, Group mixed_feeders
 #NO INTERACTION TERMS
 
-indbac=multipatt(famt, meta$diet_guild, control=how(nperm=999));
-summary(indbac);
+indbac2=multipatt(famt, meta$diet_guild, control=how(nperm=999));
+#print(summary(indbac2));
 
 #save findings to a text file
 sink("data/03_indicator_taxa_host_dietguilds.txt");
-print(summary(indbac));
+summary(indbac2);
 sink(); 

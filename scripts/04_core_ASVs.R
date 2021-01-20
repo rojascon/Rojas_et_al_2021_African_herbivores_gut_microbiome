@@ -11,8 +11,10 @@
 #
 ################################################################################
 
-##CODE FOR: for identifying ASVs present > 90% of samples & heatmap of their 
-#relative abundances. Also code for identifying ASVs present only in one host species
+##CODE FOR: for 
+#A) identifying ASVs present > 90% of samples 
+#B) heatmap of the relative abundances of ^^these ASVs
+#C) identifying ASVs biased towards a particular host species
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
 
@@ -115,7 +117,7 @@ pheatmap(
 #these ASVs are "biased" towards that host speices
 
 #create for loop to run this code for the 11 herbivore species
-myspec=as.character(levels(meta$species_short))
+myspec=as.character(levels(meta$species_short));
 
 for(i in 1:length(myspec))
 {
@@ -134,5 +136,5 @@ for(i in 1:length(myspec))
   candidates=merge(ASVs_A, ASVs_B, by=0);
   #calculate the % ASVs biased towards host species
   val=(nrow(candidates)/nrow(ASVs_A))*100; print(val);
-}
+};
 

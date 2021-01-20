@@ -11,11 +11,12 @@
 #
 ################################################################################
 
-##CODE FOR: calculating distance matrices for beta-diversity analyses
+##CODE FOR: calculating distance matrices for PERMANOVA beta-diversity analyses
 #the 4 types of distance matrices are:
 #Bray-Curtis (bray), Jaccard (jac), Weighted Unifrac (wuni), Unweighted Unifrac (unwuni)
  
 source(file="scripts/00_background.R"); #load necessary packages and specifications
+
 
 ################################################################################
 #             1. Load filtered ASV abundance table, ASV taxonomy table and 
@@ -27,12 +28,12 @@ load("data/01_sample_metadata_filtered.Rdata");
 
 
 ################################################################################
-#             2. Create phylogenetic tree of ASV sequences
-#     this is necessary for calculating Unifrac distances later
+#             2. Create phylogenetic tree of ASV sequences;
+#     this is necessary for calculating Unifrac distances 
 ################################################################################
 ##these steps are computationally expensive and needs high performance computing
 #that is why they are commented out
-#transfer this part of the code and the necessary files to the HPC at your University
+#transfer this part of the code and the necessary files to R on the HPC at your University
 
 # seqs <- getSequences(as.matrix(asvdf)); 
 # names(seqs) <- seqs;
@@ -49,6 +50,7 @@ load("data/01_sample_metadata_filtered.Rdata");
 
 #save the output as an .Rdata file
 #save(fitGTR, file="data/05_ASV_phylotree.Rdata");
+
 
 ################################################################################
 #             3. Generate the 4 types of distance matrices
@@ -80,9 +82,10 @@ unwuni.dist=UniFrac(unwuni,
                     weighted=FALSE, 
                     normalized=TRUE);
 
+
 ################################################################################
 #             4. Generate the 4 types of distance matrices
-#                     *BOVID HERBIVORES ONLY*
+#                             *BOVIDS ONLY*
 ################################################################################
 #remove non-bovid samples from meta data 
 metabov=meta[meta$Family=="Bovidae",];

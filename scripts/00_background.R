@@ -12,6 +12,7 @@
 ################################################################################
 
 ##CODE FOR: configuring R workspace and printing R version and package versions
+#for reader
 
 ################################################################################
 #             1.  Configure the workspace for subsequent R project scripts                 
@@ -28,6 +29,7 @@ pacman::p_load("car","MASS","dplyr","tidyr","reshape2","vegan","ggplot2",
                "picante","indicspecies","lme4","lmtest","multcomp","grid","phyloseq",
                "Biostrings","QsRutils","phangorn","ape","pheatmap","stringr",
                "dada2","DECIPHER","gridExtra","furrr");
+
 
 ################################################################################
 #             2. Communicate the R version and package versions to reader                 
