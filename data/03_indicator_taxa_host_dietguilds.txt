@@ -1,0 +1,92 @@
+ Multilevel pattern analysis
+ ---------------------------
+
+ Association function: IndVal.g
+ Significance level (alpha): 0.05
+
+ Total number of species: 211
+ Selected number of species: 59 
+ Number of species associated to 1 group: 26 
+ Number of species associated to 2 groups: 33 
+
+ List of species associated to each combination: 
+
+ Group grazer  #sps.  5 
+                     stat p.value   
+Sphingobacteriaceae 0.406   0.040 * 
+Flavobacteriaceae   0.403   0.036 * 
+Neisseriaceae       0.357   0.007 **
+Lentisphaerae       0.346   0.002 **
+Deltaproteobacteria 0.302   0.018 * 
+
+ Group browser  #sps.  11 
+                                 stat p.value    
+Bacillaceae                     0.760   0.010 ** 
+Coriobacteriales_Incertae_Sedis 0.618   0.001 ***
+Opitutales                      0.452   0.001 ***
+Methanomicrobia                 0.431   0.001 ***
+Rubrobacteriaceae               0.411   0.039 *  
+Methanosarcinaceae              0.411   0.002 ** 
+Fusobacteriaceae                0.369   0.014 *  
+Corynebacteriaceae              0.345   0.004 ** 
+Deferribacteraceae              0.308   0.008 ** 
+Lactobacillales                 0.286   0.007 ** 
+Carnobacteriaceae               0.247   0.023 *  
+
+ Group mixed_feeder  #sps.  10 
+                     stat p.value    
+Synergistaceae      0.743   0.001 ***
+Succinivibrionaceae 0.730   0.001 ***
+Bacteroidales_BS11  0.544   0.001 ***
+Spirochaetes_MVP-15 0.405   0.022 *  
+Desulfobulbaceae    0.336   0.005 ** 
+Endomicrobiaceae    0.333   0.007 ** 
+Phormidiaceae       0.326   0.007 ** 
+Oligoflexaceae      0.284   0.008 ** 
+Coleofasciculaceae  0.254   0.037 *  
+Polyangiaceae       0.254   0.041 *  
+
+ Group grazer+browser  #sps.  1 
+                  stat p.value   
+Actinomycetaceae 0.512   0.002 **
+
+ Group grazer+mixed_feeder  #sps.  26 
+                             stat p.value    
+Burkholderiaceae            0.938   0.001 ***
+Anaerolineaceae             0.918   0.001 ***
+Bacteroidales_RF16          0.917   0.001 ***
+Eubacteriaceae              0.917   0.001 ***
+Clostridiaceae_1            0.895   0.001 ***
+Elusimicrobiaceae           0.866   0.001 ***
+Bacteroidales_p-251-o5      0.849   0.001 ***
+Paludibacteraceae           0.849   0.001 ***
+Alphaproteobacteria         0.811   0.001 ***
+Bacteroidales_UCG-001       0.805   0.001 ***
+vadinBE97                   0.790   0.001 ***
+Bacteroidales_F082          0.752   0.001 ***
+Victivallales               0.713   0.001 ***
+Fibrobacteraceae            0.689   0.006 ** 
+Bradymonadales              0.637   0.001 ***
+Tannerellaceae              0.610   0.004 ** 
+Bacteroidales_p-2534-18B5   0.594   0.004 ** 
+Mycoplasmataceae            0.557   0.001 ***
+Verrucomicrobiae            0.548   0.003 ** 
+Oligosphaeraceae            0.542   0.015 *  
+Gammaproteobacteria         0.533   0.017 *  
+Bacteroidales_M2PB4-65      0.491   0.019 *  
+Absconditabacteriales_(SR1) 0.434   0.006 ** 
+Coxiellaceae                0.415   0.010 ** 
+Dysgonomonadaceae           0.394   0.018 *  
+Mollicutes_NED5E9           0.322   0.046 *  
+
+ Group browser+mixed_feeder  #sps.  6 
+                       stat p.value    
+Enterobacteriaceae    0.899   0.001 ***
+Streptococcaceae      0.779   0.001 ***
+Betaproteobacteriales 0.608   0.013 *  
+Myxococcales          0.559   0.004 ** 
+Campylobacteraceae    0.559   0.016 *  
+Actinobacteria        0.538   0.003 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+NULL
