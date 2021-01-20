@@ -79,3 +79,6 @@ dimnames(divergence_times) <- list(short,short);
 #             5. save matrix of host pairwise divergence times 
 ################################################################################
 save(divergence_times, file="data/06_divergence_times_matrix.Rdata");
+
+#Code for generating a phylogeny of the herbivore species is not available, but
+#the actual phylogeny (.pdf) can be found in figures/06_host_phylogeny.pdf
