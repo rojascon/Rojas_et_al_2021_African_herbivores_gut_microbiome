@@ -12,13 +12,13 @@
 ################################################################################
 
 ##Note these are analyses for the COMBINED LAIKIPIA AND MASAI MARA DATASET
-#working from Laikipia subdirectories within the main scripts, 
-#data, and figures directories
+#working from Laikipia subdirectories within the main directories
 
 ##CODE FOR: conducting PERMANOVA tests based on 4 distance matrices:
 #Bray-Curtis (bray), Jaccard (jac), Weighted Unifrac (wuni), Unweighted Unifrac (unwuni)
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
+
 
 ################################################################################
 #             1. Load beta diversity distance matrices (e.g. dissimilarity matrices) 

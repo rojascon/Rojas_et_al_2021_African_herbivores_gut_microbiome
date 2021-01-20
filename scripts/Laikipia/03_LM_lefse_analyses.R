@@ -12,13 +12,13 @@
 ################################################################################
 
 ##Note these are analyses for the COMBINED LAIKIPIA AND MASAI MARA DATASET
-#working from Laikipia subdirectories within the main scripts, 
-#data, and figures directories
+#working from Laikipia subdirectories within the main directories
 
 ##CODE FOR: 
 #A) generating ASV tables for LEfSe analyses
 #               LEfSe will identify the ASVs that are differentially enriched 
-#                   in Masai Mara giraffes vs Laikipia giraffes, for example
+#                   in Masai Mara herbivores vs Laikipia herbivores
+#C) running LEfSe on the Galaxy platform
 #B) plotting the output from LEfSe in the form of diverging plots
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
@@ -44,7 +44,6 @@ asv_tax$asv_genus=NULL;
 ################################################################################
 #             2. Calculate ASV relative abundances                 
 ################################################################################
-
 asvlef=as.matrix(asv_tax);
 asvlef=prop.table(asvlef,2);
 #print(colSums(asvlef));
@@ -55,8 +54,9 @@ asvlef=prop.table(asvlef,2);
 #                 samples from that host species are included
 ################################################################################
 
-#samples will be labelled by their host's geographic region
-#only ASVs >0.01% average relative abundance for that species are included in data frame
+#samples in the tables will be labelled by their host's geographic region
+#only ASVs >0.01% average relative abundance for that species will be included 
+#in the data frame
 
 myspecies=levels(meta$species_short);
 
@@ -81,7 +81,7 @@ for (i in 1:length(myspecies)){
 };
 
 ################################################################################
-#             3. Run LEFSE on the Galaxy platform
+#             4. Run LEfSe on the Galaxy platform
 #               https://huttenhower.sph.harvard.edu/galaxy/
 ################################################################################
 
@@ -99,7 +99,7 @@ for (i in 1:length(myspecies)){
 
 
 ################################################################################
-#             3. Prepare LEFSE data for plotting inggplot2
+#             5. Prepare LEFSE data for plotting inggplot2
 ################################################################################
 
 #read in LefSe output
@@ -125,8 +125,9 @@ lefse2=lefse2[lefse2$LDA>3.2,];
 lefse2$LDA[lefse2$region=="Laikipia"]=
   (lefse2$LDA[lefse2$region=="Laikipia"])*-1
 
+
 ################################################################################
-#             3. Plot output from LEFSE as diverging plots
+#             6. Plot output from LEfSe as diverging plots
 #               to show which ASVs are differentially enriched in 
 #                   Masai Mara relative to Laikipia herbivores
 ################################################################################
@@ -161,10 +162,10 @@ lefsep<-ggplot(lefse2, aes(x=taxa,
         strip.text = element_text(size =7.5, face="bold"))+
   guides(shape = guide_legend(override.aes = list(size = 1)));
 
-plot(lefsep);
+#plot(lefsep);
 
 ################################################################################
-#             5. save Lefse plot
+#             7. save Lefse plot
 ################################################################################
 ggsave(filename="03_laikipia_mara_lefse_plot.pdf",
        device="pdf",path="./figures/Laikipia",

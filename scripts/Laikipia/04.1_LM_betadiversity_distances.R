@@ -12,14 +12,14 @@
 ################################################################################
 
 ##Note these are analyses for the COMBINED LAIKIPIA AND MASAI MARA DATASET
-#working from Laikipia subdirectories within the main scripts, 
-#data, and figures directories
+#working from Laikipia subdirectories within the main directories
 
 ##CODE FOR: calculating distance matrices for beta-diversity analyses
 #the 4 types of distance matrices are:
 #Bray-Curtis (bray), Jaccard (jac), Weighted Unifrac (wuni), Unweighted Unifrac (unwuni)
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
+
 
 ################################################################################
 #             1. Load filtered ASV abundance table, ASV taxonomy table and 
@@ -36,7 +36,7 @@ load("data/Laikipia/01_LM_sample_metadata_filtered.Rdata");
 ################################################################################
 ##these steps are computationally expensive and needs high performance computing
 #that is why they are commented out
-#transfer this part of the code and the necessary files to the HPC at your University
+#transfer this part of the code and the necessary files to R on the HPC at your University
 
 # seqs <- getSequences(as.matrix(asvdf)); 
 # names(seqs) <- seqs;
@@ -53,6 +53,7 @@ load("data/Laikipia/01_LM_sample_metadata_filtered.Rdata");
 
 #save the output as an .Rdata file
 #save(fitGTR, file="data/Laikipia/04_LM_ASV_phylotree.Rdata");
+
 
 ################################################################################
 #             3. Generate the 4 types of distance matrices
@@ -85,7 +86,7 @@ unwuni.dist=UniFrac(unwuni,
 
 
 ################################################################################
-#             5. Save all distance matrices as a single R.data object
+#             4. Save all distance matrices as a single R.data object
 ################################################################################
 
 save("bray.dist","jac.dist","wuni.dist","unwuni.dist", 

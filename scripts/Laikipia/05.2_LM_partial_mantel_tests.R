@@ -12,16 +12,16 @@
 ################################################################################
 
 ##Note these are analyses for the COMBINED LAIKIPIA AND MASAI MARA DATASET
-#working from Laikipia subdirectories within the main scripts, 
-#data, and figures directories
+#working from Laikipia subdirectories within the main directories
 
 ##CODE FOR: running 
-#A)mantel tests of host microbiota dissimilarity vs host divergence time 
+#A) mantel tests of host microbiota dissimilarity vs host divergence time 
 
 #B) partial mantel tests of host microbiota dissimilarity vs host divergence time,
 #while controlling for dietary similarity 
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
+
 
 ################################################################################
 #             1. Load matrix of host divergence times and matrix of
@@ -33,6 +33,7 @@ load("data/Laikipia/05_LM_distances_mantel.Rdata");
 
 ##include only host species of interest in table of divergence times
 LMdivergence_times=divergence_times[c(1,3,5:9,11),c(1,3,5:9,11)]
+
 
 ################################################################################
 #             2. Run Mantel test --ALL HERBIVORES
@@ -51,6 +52,7 @@ for(i in 1:4)
                permutations=999));
 };
 
+
 ################################################################################
 #             3. Run Mantel test --BOVIDS ONLY
 ################################################################################
@@ -67,6 +69,7 @@ for(i in 1:4)
                method="spear", 
                permutations=999));
 };
+
 
 ################################################################################
 #             4. Run Partial Mantel test --ALL HERBIVORES
@@ -89,8 +92,9 @@ for(i in 1:4)
                        permutations=999));
 };
 
+
 ################################################################################
-#             4. Run Partial Mantel test --BOVIDS ONLY
+#             5. Run Partial Mantel test --BOVIDS ONLY
 ################################################################################
 
 #subset %C4 distance matrix to only include Bovids
@@ -100,7 +104,7 @@ C4.dist.bov=C4.dist[c(1:2,5:6),c(1:2,5:6)];
 #use for loop to run partial mantel test on each distance matrix
 for(i in 1:4)
 {
-  print(paste("Partial Mantel test, Laikipia Mara, all herbivores, using:", names[i]));
+  print(paste("Partial Mantel test, Laikipia Mara, bovids only using:", names[i]));
   print(mantel.partial(mydistbov[[i]], LMdivergence_times_bov,
                        C4.dist.bov,
                        method="spear", 

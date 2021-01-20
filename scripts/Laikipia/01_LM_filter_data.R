@@ -12,13 +12,13 @@
 ################################################################################
 
 ##Note these are analyses for the COMBINED LAIKIPIA AND MASAI MARA DATASET
-#working from Laikipia subdirectories within the main scripts, 
-#data, and figures directories
+#working from Laikipia subdirectories within the main directories
 
 ##CODE FOR: filtering ASV abundance table and metadata to only include
 ##samples of interest
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
+
 
 ################################################################################
 #             1. Load ASV abundance table, ASV taxonomy table and 
@@ -32,9 +32,10 @@ load("data/Laikipia/00_LM_seqtab_dada2.Rdata");
 meta=read.csv("data/Laikipia/00_LM_sample_metadata.csv", stringsAsFactors = F);
 tax=read.csv("data/Laikipia/00_LM_ASV_taxonomy_silva_v132.csv", header=T, row.names=1); 
 
+
 ################################################################################
-#             1. Remove Baboon samples and samples that did not sequence well 
-#                 from metadata table
+#             2. Remove Baboon samples and samples that did not sequence well 
+#                           from metadata table
 ################################################################################
 meta=meta[meta$species_short!="Baboon",];
 
@@ -54,9 +55,10 @@ meta$region=factor(meta$region,
                      levels=c("Masai_Mara","Laikipia"));
 meta=meta[order(meta$Group),];
 
+
 ################################################################################
-#             2. Remove Baboon samples and samples that did not sequence well 
-#                 from ASV table
+#             3. Remove Baboon samples and samples that did not sequence well 
+#                             from ASV table
 ################################################################################
 #convert ASV table from matrix to data frame
 asvdf=as.data.frame(seqtab.nochim);
@@ -79,7 +81,8 @@ asvdf=asvdf[,colnames(asvdf) %in% rownames(asvpa)];
 
 
 ################################################################################
-#             2. save filtered ASV table and filtered meta_data
+#             4. save filtered ASV table and filtered meta_data
 ################################################################################
 save(asvdf, file="data/Laikipia/01_LM_ASV_table_filtered.Rdata");
 save(meta, file="data/Laikipia/01_LM_sample_metadata_filtered.Rdata");
+

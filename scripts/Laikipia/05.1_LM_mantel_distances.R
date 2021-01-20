@@ -12,8 +12,7 @@
 ################################################################################
 
 ##Note these are analyses for the COMBINED LAIKIPIA AND MASAI MARA DATASET
-#working from Laikipia subdirectories within the main scripts, 
-#data, and figures directories
+#working from Laikipia subdirectories within the main directories
 
 ##CODE FOR: generating microbiota distance matrices Bray-Curtis (bray), 
 #Jaccard (jac), Weighted Unifrac (wuni), Unweighted Unifrac (unwuni) for Mantel tests
@@ -22,6 +21,7 @@
 #Their dimensions match the dimensions of the matrix of host divergence times
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
+
 
 ################################################################################
 #             1. Load filtered ASV table & filtered metadata table                 
@@ -32,6 +32,7 @@ load("data/Laikipia/01_LM_ASV_table_filtered.Rdata");
 #turn ASV counts to ASV proportions
 asvman<- apply(asvdf, 1, function(i) (i/sum(i)));
 colSums(asvman);
+
 
 ################################################################################
 #             2. Average the microbiota profiles for each host species 
@@ -59,6 +60,7 @@ profiles=cbind(Cattle, Impala, Elephant, Zebra, Eland, Buffalo,
 tprofiles=t(profiles); 
 rowSums(tprofiles);
 
+
 ################################################################################
 #             3. Average the microbiota profiles for each species 
 #                             using a for loop -- BOVIDS ONLY
@@ -68,7 +70,7 @@ tbovids=tprofiles[c(1,2,5,6),];
 
 
 ################################################################################
-#             3. Calculate distance matrices for mantel test 
+#             4. Calculate distance matrices for mantel test 
 #                 ALL HERBIVORES
 ################################################################################
 ####BRAY-CURTIS distance
@@ -92,8 +94,9 @@ LMmantelunwunifracall=UniFrac(uni,
                               weighted=FALSE, 
                               normalized=TRUE);
 
+
 ################################################################################
-#             3. Calculate distance matrices for mantel test 
+#             5. Calculate distance matrices for mantel test 
 #                 BOVIDS ONLY
 ################################################################################
 
@@ -116,8 +119,9 @@ LMmantelunwunifracbov=UniFrac(uni,
                               weighted=FALSE, 
                               normalized=TRUE);
 
+
 ################################################################################
-#             4. Save distance matrices for mantel test 
+#             6. Save distance matrices for mantel test 
 ################################################################################
 
 save(LMmantelbrayall, LMmantelbraybov, LMmanteljacall, LMmanteljacbov, LMmantelunifracall, 

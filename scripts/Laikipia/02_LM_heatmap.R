@@ -12,8 +12,7 @@
 ################################################################################
 
 ##Note these are analyses for the COMBINED LAIKIPIA AND MASAI MARA DATASET
-#working from Laikipia subdirectories within the main scripts, 
-#data, and figures directories
+#working from Laikipia subdirectories within the main directories
 
 ##CODE FOR: 
 #A) identifying ASVs present > 90% of samples
@@ -21,6 +20,7 @@
 #C) running linear models to statistically confirm patterns from heatmap
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
+
 
 ################################################################################
 #             1. Load filtered ASV abundance table, ASV taxonomy table and 
@@ -35,6 +35,7 @@ tax=tax%>% select("asv_genus");
 asv_tax=as.data.frame(t(asvdf));
 asv_tax=merge(asv_tax,tax,by="row.names"); 
 asv_tax$Row.names=NULL;
+
 
 ################################################################################
 #             2. Identify ASVs present > 90% of samples                 
@@ -53,6 +54,7 @@ cp=as.data.frame(cp);
 cutoff=round(0.90*ncol(cp));
 cp1=cp[rowSums(cp)>cutoff,];
 print(rownames(cp1));
+
 
 ################################################################################
 #             3. Make a heatmap of the 32 most abundant ASVs                 
@@ -114,8 +116,9 @@ pheatmap(
 #then going to Plots > Export > Save as PDF
 #save file in directory "figures/Laikipia", with filename= 02_laikipia_mara_ASVheatmap.pdf
 
+
 ################################################################################
-#             3. Run Linear Mixed Models to test whether ASV abundances
+#             4. Run Linear Mixed Models to test whether ASV abundances
 #                   shown in the heatmap differ between hosts from the two 
 #                           geographic regions
 ################################################################################
@@ -156,3 +159,4 @@ mypvalues$pvalue_adjusted=p.adjust(mypvalues$pvalue, method="BH");
 
 #export table
 write.csv(mypvalues, file="figures/Laikipia/02_LM_lmer_ASVs.csv", row.names=F);
+

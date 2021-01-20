@@ -12,10 +12,9 @@
 ################################################################################
 
 ##Note these are analyses for the COMBINED LAIKIPIA AND MASAI MARA DATASET
-#working from Laikipia subdirectories within the main scripts, 
-#data, and figures directories
+#working from Laikipia subdirectories within the main directories
 
-##CODE FOR: constructing PCoAs based on beta-diversity distance matrices
+##CODE FOR: constructing PCoA ordinations based on beta-diversity distance matrices
 #Bray-Curtis (bray), Jaccard (jac), Weighted Unifrac (wuni), Unweighted Unifrac (unwuni)
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
@@ -51,7 +50,6 @@ ax2=format(pcoa_per[2], digits=2, nsmall=2);
 #                  using shape to indicate host geographic region
 ################################################################################
 
-
 #color-palette
 my_col=c("#1b9e77", "#d95f02", "#e7298a","#225ea8",
          "#ffd92f","#f781bf","#43a2ca","palegreen"); 
@@ -80,10 +78,10 @@ LM_pcoa=ggplot(pcoa_met, aes(Axis1,Axis2,
         axis.text.y=element_text(size=13),
         axis.title.y=element_text(size=13, face="bold"));
 
-plot(LM_pcoa);
+#plot(LM_pcoa);
 
 ################################################################################
-#             3. save PCoA ordination
+#             4. save PCoA ordination
 ################################################################################
 ggsave(filename="04_laikipia_mara_pcoa.pdf",
        device="pdf",path="./figures/Laikipia",
