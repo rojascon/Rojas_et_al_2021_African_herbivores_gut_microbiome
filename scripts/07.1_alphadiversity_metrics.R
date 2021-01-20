@@ -46,11 +46,12 @@ mothur=cbind(tempdf, asvdf)
 write.table(mothur, file="data/07_input.mothur.txt", row.names=F, sep="\t")
 
 #run mothur
-#step1: for some reason, must open the above file in Excel, and save as Tab delimited file
+#step1: for some reason, must open the above .txt file in Excel, and 
+#           save as Tab delimited file (.txt)
 #step2: download and open mothur software (Schloss et.al 2009)
 #step3: run the command: 
 #           sub.sample(shared=07_input.mothur.txt, size=17000, persample=true)
-#step4: rename output file as "07_output.mothur.txt") and place in data directory
+#step4: rename output file as "07_output.mothur.txt") and place in the data directory
 
 
 ################################################################################

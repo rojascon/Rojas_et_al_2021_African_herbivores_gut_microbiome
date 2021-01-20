@@ -11,15 +11,16 @@
 #
 ################################################################################
 
-##CODE FOR: generating a table that shows the amount of samples collecter 
+##CODE FOR: generating a table that shows the amount of samples collected 
 #per herbivore species for each month (March-June)
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
 
+
 ################################################################################
-#             1. Make dataframe of the number of samples collected for each month                
+#             1. Make dataframe of the number of samples 
+#                       collected for each month                
 ################################################################################
-#load("data/01_sample_metadata_filtered.Rdata");
 
 #make a dataframe of sample counts for each species for each month
 dens=data.frame("March" = c(0, 13, 6, 2, 8, 3,29, 16,1,1,1), 
@@ -39,6 +40,7 @@ mbar$sp=factor(mbar$sp,
 ################################################################################
 #             2. Plot data in the form of stacked bar plots                
 ################################################################################
+
 #set color-palette (1 color for each host species)
 my_col=c("#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462",
          "#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f");
@@ -64,7 +66,8 @@ mbarp=ggplot(data=mbar,
         axis.text.y = element_text(size=12),
         axis.text.x=element_text(size=12));
 
-plot(mbarp);
+#plot(mbarp);
+
 
 ################################################################################
 #             3. save plot

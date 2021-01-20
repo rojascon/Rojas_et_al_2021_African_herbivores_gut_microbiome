@@ -19,6 +19,7 @@
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
 
+
 ################################################################################
 #             1. Load matrix of host divergence times and matrix of
 #                   microbiota distances
@@ -26,6 +27,7 @@ source(file="scripts/00_background.R"); #load necessary packages and specificati
 
 load("data/06_divergence_times_matrix.Rdata");
 load("data/06_distances_mantel.Rdata");
+
 
 ################################################################################
 #             2. Run Mantel test --ALL HERBIVORES
@@ -55,7 +57,7 @@ mydistbov=list(mantelbraybov, manteljacbov, mantelunifracbov, mantelunwunifracbo
 
 for(i in 1:4)
 {
-  print(paste("Mantel test, all herbivores, using:", names[i]));
+  print(paste("Mantel test, bovids only, using:", names[i]));
   print(mantel(mydistbov[[i]], divergence_times_bov, 
                method="spear", 
                permutations=999));
@@ -83,7 +85,7 @@ for(i in 1:4)
 
 
 ################################################################################
-#             4. Run Partial Mantel test --BOVIDS ONLY
+#             5. Run Partial Mantel test --BOVIDS ONLY
 ################################################################################
 
 #subset %C4 distance matrix to only include Bovids
@@ -93,7 +95,7 @@ C4.dist.bov=C4.dist[c(1:4,7:8,10),c(1:4,7:8,10)];
 #use for loop to run partial mantel test on each distance matrix
 for(i in 1:4)
 {
-  print(paste("Partial Mantel test, all herbivores, using:", names[i]));
+  print(paste("Partial Mantel test, bovids only, using:", names[i]));
   print(mantel.partial(mydistbov[[i]], divergence_times_bov,
                        C4.dist.bov,
                        method="spear", 

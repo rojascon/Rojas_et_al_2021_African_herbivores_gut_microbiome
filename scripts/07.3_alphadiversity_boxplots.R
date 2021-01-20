@@ -24,6 +24,7 @@ load("data/01_sample_metadata_filtered.Rdata")
 load("data/07_alpha_values.Rdata")
 alphadf=inner_join(alpha[,c(1,5)], meta[,c(1,5,8,12)], by="Group")
 
+
 ################################################################################
 #             2. rearrange data frames to facilitate plotting in ggplot2
 #                            ALL HERBIVORES
@@ -43,6 +44,7 @@ colnames(B)=c("Group","value","variable","category");
 
 C=rbind(A,B);
 C$category=factor(C$cat, levels=c("Host family","Host dietary guild"));
+
 
 ################################################################################
 #             3. plot boxplots of alpha diversity color coded by
@@ -70,7 +72,8 @@ herb_box=ggplot(data=C,
         axis.text.x=element_text(size=10, angle = 45, vjust = 0.66),
         strip.text = element_text(size =11, face="bold"));
 
-plot(herb_box);
+#plot(herb_box);
+
 
 ################################################################################
 #             4. rearrange data frames to facilitate plotting in ggplot2
@@ -101,7 +104,7 @@ G$category=factor(G$cat, levels=c("Host species","Host dietary guild"));
 
 
 ################################################################################
-#             3. plot boxplots of alpha diversity color coded by
+#             5. plot boxplots of alpha diversity color coded by
 #                   host species and host dietary guild
 #                       BOVIDS ONLY
 ################################################################################
@@ -127,7 +130,7 @@ bov_box=ggplot(data=G,
         axis.text.x=element_text(size=10, angle = 45, vjust=0.66),
         strip.text = element_text(size =11, face="bold"));
 
-plot(bov_box);
+#plot(bov_box);
 
 
 ################################################################################

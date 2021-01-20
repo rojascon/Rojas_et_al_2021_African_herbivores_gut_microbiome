@@ -30,11 +30,11 @@ alphadf=inner_join(alpha[,c(1,3,5,10)], meta[,c(1,2,5,8,12)], by="Group")
 ################################################################################
 #             2. Run linear models of gut microbiota alpha-diversity ~
 #     host dietary guild + host family, while controlling for sample month
-#                             ALL HERBIVORES
+#                               ALL HERBIVORES
 ################################################################################
 
 #there are three alpha-diversity metrics of interest, so will use a for loop
-#save model to a list for later retrieval
+#we will also save the model to a list for retrieval later
 
 mymetrics=c("","Chao1", "Shannon","PD")
 hlist <- list()  
@@ -56,7 +56,7 @@ for(i in 2:4)
 ################################################################################
 #             3. Run linear models of gut microbiota alpha-diversity ~
 #     host dietary guild + host species, while controlling for sample month
-#                           BOVIDS ONLY
+#                               BOVIDS ONLY
 ################################################################################
 
 #run the same model but on bovids only
@@ -82,8 +82,7 @@ for(i in 2:4)
 
 
 ################################################################################
-#             3. Run linear post-hoc comparison testing to determine where the
-#                   differences are found : ALL HERBIVORES
+#             4. Run Tukey post-hoc comparisons on linear model: ALL HERBIVORES
 ################################################################################
 #use for loop to run multiple comparison Tukey testing
 
@@ -111,8 +110,7 @@ for(i in 2:4)
 
 
 ################################################################################
-#             3. Run linear post-hoc comparison testing to determine where the
-#                   differences are found : BOVIDS ONLY
+#             5. Run Tukey post-hoc comparisons on linear model: BOVIDS ONLY
 ################################################################################
 #use for loop to run multiple comparison Tukey testing
 

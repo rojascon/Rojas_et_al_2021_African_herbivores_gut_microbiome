@@ -19,6 +19,7 @@
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
 
+
 ################################################################################
 #             1. Load filtered ASV table & filtered metadata table                 
 ################################################################################
@@ -32,7 +33,7 @@ colSums(asvman);
 
 ################################################################################
 #             2. Average the microbiota profiles for each species 
-#                             using a for loop -- ALL HERBIVORES
+#                       using a for loop -- ALL HERBIVORES
 ################################################################################
 #replace ASV table column names with their host species names
 colnames(asvman)=meta$species_short[
@@ -58,14 +59,14 @@ rowSums(tprofiles);
 
 ################################################################################
 #             3. Average the microbiota profiles for each species 
-#                             using a for loop -- BOVIDS ONLY
+#                       using a for loop -- BOVIDS ONLY
 ################################################################################
 #simply remove non-bovid species from master data frame from above
 tbovids=tprofiles[c(1:4,7:8,10),];
 
 
 ################################################################################
-#             3. Calculate distance matrices for mantel test --ALL HERBIVORES
+#             4. Calculate distance matrices for mantel test --ALL HERBIVORES
 ################################################################################
 ####BRAY-CURTIS distances
 mantelbrayall=vegdist(tprofiles, method="bray"); 
@@ -90,7 +91,7 @@ mantelunwunifracall=UniFrac(uni,
 
 
 ################################################################################
-#             4. Calculate distance matrices for mantel test --BOVIDS ONLY
+#             5. Calculate distance matrices for mantel test --BOVIDS ONLY
 ################################################################################
 ####BRAY-CURTIS distances
 mantelbraybov=vegdist(tbovids, method="bray"); 
@@ -113,7 +114,7 @@ mantelunwunifracbov=UniFrac(uni,
 
 
 ################################################################################
-#             4. Save distance matrices for mantel test 
+#             6. Save distance matrices for mantel test 
 ################################################################################
 save(mantelbrayall, mantelbraybov, manteljacall, manteljacbov, mantelunifracall, 
      mantelunifracbov, mantelunwunifracall, mantelunwunifracbov, 

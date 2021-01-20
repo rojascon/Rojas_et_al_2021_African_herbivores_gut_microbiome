@@ -12,7 +12,7 @@
 ################################################################################
 
 ##CODE FOR: generating rarefaction curve of ASV richness after samples were
-#subsampled to 17,000 sequences for alpha-diversity analyses
+#subsampled to 17,000 sequences 
 
 #NOTE: there will be a bit of a lag to run code from beginning to end
 #because of large amount of data displayed
@@ -23,34 +23,41 @@ source(file="scripts/00_background.R"); #load necessary packages and specificati
 ################################################################################
 #             1. Generate rarefaction curve data using mothur software                 
 ################################################################################
+#In script 07_alphadiversity_metrics.R we included code for how to subsample our
+#samples to 17,000 sequences each using the mothur software
+#this way all samples have the same # of sequences and we can make comparisons
+#Now, we will make a rarefaction plot to double check that our 17,000 sequence
+#cutoff was appropirate
+
 #Step1: open data file "data/07_output.mothur.txt" in Excel and save as .txt
 #for some reason, mothur insists on this step ^^^
 
 #Step2: open mothur and run command:
 #       rarefaction.single(shared=07_output.mothur.txt, calc=sobs, freq=1)
-#Code will take a few minutes to run
+#Code will take ~20 mins to run
 
 #Step3: rename output file as "08_mothur_rarefaction.txt" and place in the 
 #data directory
 
+
 ################################################################################
 #             2. Clean and arrange data for ggplot2                 
 ################################################################################
-#read in data output from mothur after rarefaction
+#read in rarefaction data output by mothur
 mrare=read.table("data/08_mothur_rarefaction.txt", 
                               sep="\t", header=TRUE);
 
 #load sample metadata
 load("data/01_sample_metadata_filtered.Rdata")
 
-#clean up rarefaction curve data
+#clean rarefaction data 
 raref=mrare[, grepl("X0.03.*",names(mrare))]; 
 colnames(raref)=gsub("X0.03.", "", colnames(raref)); 
 
 raref=cbind(mrare$numsampled,raref);
 colnames(raref)[1]="numsampled";
 
-#melt table for ggplot2 (timepoint|sample|numOTUs)
+#melt data for ggplot2 (timepoint|sample|numOTUs)
 rf<- reshape2::melt(raref, id.vars="numsampled",value.name = "ASV_Richness");
 colnames(rf)=c("TimeSampled", "Group", "ASV_Richness");
 rare_meta=merge(rf, meta, by="Group");
@@ -96,7 +103,7 @@ rfc=ggplot(data=rare_meta) +
 ################################################################################
 #             4. save plot              
 ################################################################################
-#NOTE: there is a bit of a lag because of large amount of data displayed
+#NOTE: there will be a bit of a lag because of large amount of data displayed
 ggsave(filename="08_rarefaction_curves.pdf",
        device="pdf",path="./figures",
        plot=rfc,

@@ -18,6 +18,7 @@
 
 source(file="scripts/00_background.R"); #load necessary packages and specifications
 
+
 ################################################################################
 #             1. Load matrix of host divergence times and matrix of
 #                   microbiota distances
@@ -73,7 +74,8 @@ hps=ggplot(all_herb,aes(x=div_time, y=dissim))+
         axis.title.x=element_text(size=12, face="bold"),
         axis.title.y=element_text(size=12, face="bold"));
 
-plot(hps);
+#plot(hps);
+
 
 ################################################################################
 #             4. Reorganize data frame to facilitate plotting in ggplot2
@@ -100,6 +102,7 @@ bov_herb<- bovdiv2 %>% right_join(bovmicro2, by=c("taxon_1","taxon_2"))
 #remove self comparisons (e.g. cattle vs cattle)
 bov_herb=bov_herb[bov_herb$dissim!=0,];
 
+
 ################################################################################
 #             5. Plot scatterplot of gut microbiota dissimilarity 
 #                       vs. host divergence time -- BOVIDS ONLY
@@ -119,7 +122,8 @@ bps=ggplot(bov_herb,aes(x=div_time, y=dissim))+
         axis.title.x=element_text(size=12, face="bold"),
         axis.title.y=element_text(size=12, face="bold"));
 
-plot(bps);
+#plot(bps);
+
 
 ################################################################################
 #             6. Build gut microbiota dendogram of all study species
