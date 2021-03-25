@@ -47,7 +47,7 @@ for(i in 2:4)
               alphadf$Family+
               (1|alphadf$sample_date),
             data=alphadf, na.action=na.fail);
-  print(summary(hmod));
+  #print(summary(hmod));
   print("Are host predictors statistically significant?");
   print(Anova(hmod));
   hlist[[i]]=hmod;
@@ -55,6 +55,32 @@ for(i in 2:4)
 
 ################################################################################
 #             3. Run linear models of gut microbiota alpha-diversity ~
+#     host dietary guild + host species, while controlling for sample month
+#                               ALL HERBIVORES
+################################################################################
+
+#there are three alpha-diversity metrics of interest, so will use a for loop
+#we will also save the model to a list for retrieval later
+
+mymetrics=c("","Chao1", "Shannon","PD")
+hlist2 <- list()  
+
+for(i in 2:4)
+{
+  print(paste("Linear mixed model, all herbivores, for:", mymetrics[i]));
+  hmod2=lmer(alphadf[,i]~
+              alphadf$diet_guild+
+              alphadf$species_short+
+              (1|alphadf$sample_date),
+            data=alphadf, na.action=na.fail);
+  #print(summary(hmod));
+  print("Are host predictors statistically significant?");
+  print(Anova(hmod2));
+  hlist2[[i]]=hmod2;
+};
+
+################################################################################
+#             4. Run linear models of gut microbiota alpha-diversity ~
 #     host dietary guild + host species, while controlling for sample month
 #                               BOVIDS ONLY
 ################################################################################
@@ -80,9 +106,8 @@ for(i in 2:4)
   blist[[i]]=bmod;
 };
 
-
 ################################################################################
-#             4. Run Tukey post-hoc comparisons on linear model: ALL HERBIVORES
+#             5. Run Tukey post-hoc comparisons on linear model: ALL HERBIVORES
 ################################################################################
 #use for loop to run multiple comparison Tukey testing
 
@@ -108,9 +133,19 @@ for(i in 2:4)
                 test=adjusted("BH")));
 };
 
+#which host species differ from each other in terms of their gut microbiota 
+#alphadiversity?
+for(i in 2:4)
+{
+  print(paste("Tukey PostHoc Host Family Comparisons, all herbivores, for:", 
+              mymetrics[i]));
+  print(summary(glht(hlist2[[i]], 
+                     linfct=mcp("alphadf$Family"="Tukey")),
+                test=adjusted("BH")));
+};
 
 ################################################################################
-#             5. Run Tukey post-hoc comparisons on linear model: BOVIDS ONLY
+#             6. Run Tukey post-hoc comparisons on linear model: BOVIDS ONLY
 ################################################################################
 #use for loop to run multiple comparison Tukey testing
 
@@ -136,6 +171,7 @@ for(i in 2:4)
                 test=adjusted("BH")));
 };
 
-##SPECIAL NOTE: If getting the error message "number of items to replace is not a multiple 
-#of replacement length", for the code immediately above, rerun the bovid lmer models but put the
-# host species term before the host diet term
+##SPECIAL NOTE: If getting the error message "number of items to replace is not 
+#a multiple of replacement length", for the code immediately above, rerun the 
+#bovid lmer models (or all herbivore lmer models) but put thhost species term 
+#before the host diet term

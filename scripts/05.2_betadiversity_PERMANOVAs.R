@@ -26,10 +26,10 @@ load("data/05_dissimilarity_distances_beta.Rdata")
 
 
 ################################################################################
-#             2. conduct PERMANOVAs -- ALL HERBIVORES                 
+#             2. conduct PERMANOVAs -- ALL HERBIVORES (host family)                
 ################################################################################
 #basically asking, does gut microbiota structure vary with sample month, host
-#dietary guild, host family, and host species?
+#dietary guild, and host family?
 #because the same test is done on each type of distance matrix [4 total], we
 #will use a for loop
 
@@ -45,7 +45,32 @@ for(i in 1:4)
   print(adonis(mydist[[i]]~     
                  sample_month+
                  diet_guild+
-                 Family+
+                 Family,
+               data=meta,
+               method = met[i],     
+               permutations = 999));
+};
+
+################################################################################
+#             3. conduct PERMANOVAs -- ALL HERBIVORES (host species)                
+################################################################################
+#basically asking, does gut microbiota structure vary with sample month, host
+#dietary guild, and host species?
+#because the same test is done on each type of distance matrix [4 total], we
+#will use a for loop
+
+#set variables for for loop
+mydist=list(bray.dist, jac.dist, wuni.dist, unwuni.dist)
+names=c("Bray-Curtis", "Jaccard index", "Weighted Unifrac", "Unweighted Unifrac")
+met=c("bray","jaccard","bray","jaccard") 
+
+#run for loop to conduct the 4 PERMANOVA tests
+for(i in 1:4)
+{
+  print(paste("PERMANOVA test, all herbivores, using:", names[i]));
+  print(adonis(mydist[[i]]~     
+                 sample_month+
+                 diet_guild+
                  species_short,   
                data=meta,
                method = met[i],     
@@ -53,7 +78,7 @@ for(i in 1:4)
 };
 
 ################################################################################
-#             3. conduct PERMANOVAs -- BOVIDS ONLY                
+#             4. conduct PERMANOVAs -- BOVIDS ONLY                
 ################################################################################
 #same tests as above, but restricting dataset to bovids only
 
