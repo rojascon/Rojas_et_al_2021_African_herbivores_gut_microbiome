@@ -37,14 +37,18 @@ samples=as.character(meta$Group);
 #             2. Create Phylum level composition barplots                 
 ################################################################################
 #select bacterial taxonomic rank
-phylum=asv_tax[,which(names(asv_tax) 
+phylum = asv_tax[,which(names(asv_tax) 
                       %in% c(samples, "Phylum"))];
+
 colnames(phylum)[ncol(phylum)]="taxa";
 
 #calculate ASV relative abundances 
-phylum=aggregate(.~taxa, phylum, sum);  
-phylum[,-1] <- lapply(phylum[,-1], function(x) (x/sum(x))*100);
-print(colSums(phylum[-1]));
+phylum=aggregate(.~taxa, phylum,sum);  
+
+phylum[,-1]=as.data.frame(lapply(phylum[,-1], 
+                      function(x) (x/sum(x))*100));
+
+colSums(phylum[-1]);
 
 #keep phyla >1% relative abundance across samples
 phylum$AVG=rowMeans(phylum[,-1]);
@@ -52,7 +56,7 @@ phylum=phylum[phylum$AVG>1,];
 phylum$AVG=NULL;
 
 #denote the rest of phyla as "Other"
-newrow=c(NA, 100-colSums(phylum[2:ncol(phylum)])); 
+newrow=c(NA, 100-colSums(phylum[,-1])); 
 phylum=rbind(phylum, newrow); 
 phylum$taxa=as.character(phylum$taxa);
 phylum[nrow(phylum),1]="Other";
@@ -68,9 +72,9 @@ phy_col=c("#8c6bb1","#6baed6","#cb181d","#2171b5","#74c476",
 
 #create plot
 barphy=ggplot(data=pbar, 
-              mapping=aes(x=Group,y=abun, fill=taxa))+
-  geom_bar(stat = "identity")+
-  facet_grid(~species_short, scales="free_x")+ 
+              aes(x=Group,y=abun, fill=taxa))+
+  geom_bar(stat = "identity"); plot(barphy)+
+  facet_grid(~species_short, scales="free_x"); plot(barphy)
   theme_bw()+ 
   labs(x = "",
        y = "Relative Abundance (%)",

@@ -65,6 +65,7 @@ hps=ggplot(all_herb,aes(x=div_time, y=dissim))+
   theme_classic()+labs(title = "All herbivores")+
   labs(y="Microbiota dissimilarity (0-1)",
        x="Host Divergence time (mya)")+
+  ylim(0.4,1)+
   scale_x_continuous(breaks=seq(8,91, by=20))+
   theme(legend.title=element_blank(),text = element_text(size=12),
         legend.position="right",
@@ -74,7 +75,7 @@ hps=ggplot(all_herb,aes(x=div_time, y=dissim))+
         axis.title.x=element_text(size=12, face="bold"),
         axis.title.y=element_text(size=12, face="bold"));
 
-#plot(hps);
+plot(hps);
 
 
 ################################################################################
@@ -122,7 +123,7 @@ bps=ggplot(bov_herb,aes(x=div_time, y=dissim))+
         axis.title.x=element_text(size=12, face="bold"),
         axis.title.y=element_text(size=12, face="bold"));
 
-#plot(bps);
+plot(bps);
 
 
 ################################################################################
@@ -139,14 +140,14 @@ hr=as.phylo(hr);
 plot(hr,font=1); nodelabels(bg="white")
 
 #rotate dendogram slightly
-rt.14 <- rotate((hr), 12);
-rt.14b <- rotate(rt.14, 13);
-rt.14c <- rotate(rt.14b, 16);
-rt.14d <- rotate(rt.14c, 17);
-rt.14e <- rotate(rt.14d, 19);
-rt.14f <- rotate(rt.14e, 20);
-rt.14g <- rotate(rt.14f, 20); 
-rt.14h <- rotate(rt.14g, 18);
+rt.14 <- ape::rotate((hr), 12);
+rt.14b <- ape::rotate(rt.14, 13);
+rt.14c <- ape::rotate(rt.14b, 16);
+rt.14d <- ape::rotate(rt.14c, 17);
+rt.14e <- ape::rotate(rt.14d, 19);
+rt.14f <- ape::rotate(rt.14e, 20);
+rt.14g <- ape::rotate(rt.14f, 20); 
+rt.14h <- ape::rotate(rt.14g, 18);
 
 #plot dendogram
 plot.phylo(hr, type="p", 
